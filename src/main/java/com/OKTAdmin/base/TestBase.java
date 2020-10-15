@@ -24,7 +24,7 @@ public class TestBase {
 		try
 		{
 			prop=new Properties();
-			FileInputStream fis=new FileInputStream("C:\\Users\\Shanu\\ScoopWhoop-workspace\\OkTestedAdmin\\src\\main\\java\\com\\OKTAdmin\\config\\Config.properties");
+			FileInputStream fis=new FileInputStream("..\\config\\Config.properties");
 			prop.load(fis);
 		}
 		catch(IOException e)
