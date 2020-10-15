@@ -6,7 +6,9 @@
       <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest">
         <methods>
           <include name="Create_Text_Post"/>
+          <include name="Verify_Multiple_Validation_For_Text_Post"/>
           <include name="teardown"/>
+          <include name="Verify_Labels"/>
           <include name="Setup"/>
         </methods>
       </class> <!-- com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest -->
