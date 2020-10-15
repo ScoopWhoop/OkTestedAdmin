@@ -24,7 +24,7 @@ public class TestBase {
 		try
 		{
 			prop=new Properties();
-			FileInputStream fis=new FileInputStream("..\\config\\Config.properties");
+			FileInputStream fis=new FileInputStream("..//config//Config.properties");
 			prop.load(fis);
 		}
 		catch(IOException e)
