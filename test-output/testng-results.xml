@@ -2,29 +2,27 @@
 <testng-results skipped="3" failed="0" ignored="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1012" started-at="2020-10-15T19:41:32 IST" finished-at="2020-10-15T19:41:33 IST">
+  <suite name="Default suite" duration-ms="168" started-at="2020-10-15T20:14:44 IST" finished-at="2020-10-15T20:14:44 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1012" started-at="2020-10-15T19:41:32 IST" finished-at="2020-10-15T19:41:33 IST">
+    <test name="Default test" duration-ms="168" started-at="2020-10-15T20:14:44 IST" finished-at="2020-10-15T20:14:44 IST">
       <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest">
-        <test-method status="FAIL" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Setup" is-config="true" duration-ms="899" started-at="2020-10-15T19:41:32 IST" finished-at="2020-10-15T19:41:33 IST">
-          <exception class="java.lang.NoSuchMethodError">
+        <test-method status="FAIL" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Setup" is-config="true" duration-ms="72" started-at="2020-10-15T20:14:44 IST" finished-at="2020-10-15T20:14:44 IST">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[org.apache.commons.io.IOUtils.toString(Ljava/io/InputStream;Ljava/nio/charset/Charset;)Ljava/lang/String;]]>
+              <![CDATA[The driver executable does not exist: C:\usr\bin\chromedriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.toString(Ljava/io/InputStream;Ljava/nio/charset/Charset;)Ljava/lang/String;
-at io.github.bonigarcia.wdm.versions.Shell.runAndWaitNoLog(Shell.java:66)
-at io.github.bonigarcia.wdm.versions.Shell.runAndWaitArray(Shell.java:55)
-at io.github.bonigarcia.wdm.versions.Shell.runAndWait(Shell.java:49)
-at io.github.bonigarcia.wdm.versions.VersionDetector.getBrowserVersionInWindows(VersionDetector.java:220)
-at io.github.bonigarcia.wdm.versions.VersionDetector.getDefaultBrowserVersion(VersionDetector.java:180)
-at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getBrowserVersionFromTheShell(ChromeDriverManager.java:124)
-at io.github.bonigarcia.wdm.WebDriverManager.detectBrowserVersion(WebDriverManager.java:718)
-at io.github.bonigarcia.wdm.WebDriverManager.resolveDriverVersion(WebDriverManager.java:587)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:539)
-at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:287)
-at com.OKTAdmin.base.TestBase.intilization(TestBase.java:49)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
+at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+at com.OKTAdmin.base.TestBase.intilization(TestBase.java:56)
 at com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest.Setup(OKTAdminPostDetailScreenForText_PostTest.java:32)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -60,28 +58,26 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoSuchMethodError -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="Verify_Labels()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Verify_Labels" duration-ms="0" started-at="2020-10-15T19:41:33 IST" finished-at="2020-10-15T19:41:33 IST">
-          <exception class="java.lang.NoSuchMethodError">
+        <test-method status="SKIP" signature="Verify_Labels()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Verify_Labels" duration-ms="0" started-at="2020-10-15T20:14:44 IST" finished-at="2020-10-15T20:14:44 IST">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[org.apache.commons.io.IOUtils.toString(Ljava/io/InputStream;Ljava/nio/charset/Charset;)Ljava/lang/String;]]>
+              <![CDATA[The driver executable does not exist: C:\usr\bin\chromedriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.toString(Ljava/io/InputStream;Ljava/nio/charset/Charset;)Ljava/lang/String;
-at io.github.bonigarcia.wdm.versions.Shell.runAndWaitNoLog(Shell.java:66)
-at io.github.bonigarcia.wdm.versions.Shell.runAndWaitArray(Shell.java:55)
-at io.github.bonigarcia.wdm.versions.Shell.runAndWait(Shell.java:49)
-at io.github.bonigarcia.wdm.versions.VersionDetector.getBrowserVersionInWindows(VersionDetector.java:220)
-at io.github.bonigarcia.wdm.versions.VersionDetector.getDefaultBrowserVersion(VersionDetector.java:180)
-at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getBrowserVersionFromTheShell(ChromeDriverManager.java:124)
-at io.github.bonigarcia.wdm.WebDriverManager.detectBrowserVersion(WebDriverManager.java:718)
-at io.github.bonigarcia.wdm.WebDriverManager.resolveDriverVersion(WebDriverManager.java:587)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:539)
-at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:287)
-at com.OKTAdmin.base.TestBase.intilization(TestBase.java:49)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
+at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+at com.OKTAdmin.base.TestBase.intilization(TestBase.java:56)
 at com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest.Setup(OKTAdminPostDetailScreenForText_PostTest.java:32)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -117,40 +113,30 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoSuchMethodError -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Labels -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="teardown" is-config="true" duration-ms="-1602771093533" started-at="2020-10-15T19:41:33 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="teardown" is-config="true" duration-ms="-1602773084757" started-at="2020-10-15T20:14:44 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="SKIP" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Setup" is-config="true" duration-ms="-1602771093533" started-at="2020-10-15T19:41:33 IST" finished-at="1970-01-01T05:30:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="teardown" is-config="true" duration-ms="-1602771093541" started-at="2020-10-15T19:41:33 IST" finished-at="1970-01-01T05:30:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="SKIP" signature="Verify_Multiple_Validation_For_Text_Post()[pri:1, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Verify_Multiple_Validation_For_Text_Post" duration-ms="0" started-at="2020-10-15T19:41:33 IST" finished-at="2020-10-15T19:41:33 IST">
-          <exception class="java.lang.NoSuchMethodError">
+        <test-method status="SKIP" signature="Verify_Multiple_Validation_For_Text_Post()[pri:1, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Verify_Multiple_Validation_For_Text_Post" duration-ms="0" started-at="2020-10-15T20:14:44 IST" finished-at="2020-10-15T20:14:44 IST">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[org.apache.commons.io.IOUtils.toString(Ljava/io/InputStream;Ljava/nio/charset/Charset;)Ljava/lang/String;]]>
+              <![CDATA[The driver executable does not exist: C:\usr\bin\chromedriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.toString(Ljava/io/InputStream;Ljava/nio/charset/Charset;)Ljava/lang/String;
-at io.github.bonigarcia.wdm.versions.Shell.runAndWaitNoLog(Shell.java:66)
-at io.github.bonigarcia.wdm.versions.Shell.runAndWaitArray(Shell.java:55)
-at io.github.bonigarcia.wdm.versions.Shell.runAndWait(Shell.java:49)
-at io.github.bonigarcia.wdm.versions.VersionDetector.getBrowserVersionInWindows(VersionDetector.java:220)
-at io.github.bonigarcia.wdm.versions.VersionDetector.getDefaultBrowserVersion(VersionDetector.java:180)
-at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getBrowserVersionFromTheShell(ChromeDriverManager.java:124)
-at io.github.bonigarcia.wdm.WebDriverManager.detectBrowserVersion(WebDriverManager.java:718)
-at io.github.bonigarcia.wdm.WebDriverManager.resolveDriverVersion(WebDriverManager.java:587)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:539)
-at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:287)
-at com.OKTAdmin.base.TestBase.intilization(TestBase.java:49)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
+at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+at com.OKTAdmin.base.TestBase.intilization(TestBase.java:56)
 at com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest.Setup(OKTAdminPostDetailScreenForText_PostTest.java:32)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -186,32 +172,38 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoSuchMethodError -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Multiple_Validation_For_Text_Post -->
-        <test-method status="SKIP" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Setup" is-config="true" duration-ms="-1602771093556" started-at="2020-10-15T19:41:33 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Setup" is-config="true" duration-ms="-1602773084765" started-at="2020-10-15T20:14:44 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="Create_Text_Post()[pri:2, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Create_Text_Post" duration-ms="0" started-at="2020-10-15T19:41:33 IST" finished-at="2020-10-15T19:41:33 IST">
-          <exception class="java.lang.NoSuchMethodError">
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="teardown" is-config="true" duration-ms="-1602773084773" started-at="2020-10-15T20:14:44 IST" finished-at="1970-01-01T05:30:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="SKIP" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Setup" is-config="true" duration-ms="-1602773084781" started-at="2020-10-15T20:14:44 IST" finished-at="1970-01-01T05:30:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="SKIP" signature="Create_Text_Post()[pri:2, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="Create_Text_Post" duration-ms="0" started-at="2020-10-15T20:14:44 IST" finished-at="2020-10-15T20:14:44 IST">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[org.apache.commons.io.IOUtils.toString(Ljava/io/InputStream;Ljava/nio/charset/Charset;)Ljava/lang/String;]]>
+              <![CDATA[The driver executable does not exist: C:\usr\bin\chromedriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.toString(Ljava/io/InputStream;Ljava/nio/charset/Charset;)Ljava/lang/String;
-at io.github.bonigarcia.wdm.versions.Shell.runAndWaitNoLog(Shell.java:66)
-at io.github.bonigarcia.wdm.versions.Shell.runAndWaitArray(Shell.java:55)
-at io.github.bonigarcia.wdm.versions.Shell.runAndWait(Shell.java:49)
-at io.github.bonigarcia.wdm.versions.VersionDetector.getBrowserVersionInWindows(VersionDetector.java:220)
-at io.github.bonigarcia.wdm.versions.VersionDetector.getDefaultBrowserVersion(VersionDetector.java:180)
-at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getBrowserVersionFromTheShell(ChromeDriverManager.java:124)
-at io.github.bonigarcia.wdm.WebDriverManager.detectBrowserVersion(WebDriverManager.java:718)
-at io.github.bonigarcia.wdm.WebDriverManager.resolveDriverVersion(WebDriverManager.java:587)
-at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:539)
-at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:287)
-at com.OKTAdmin.base.TestBase.intilization(TestBase.java:49)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\usr\bin\chromedriver
+at com.google.common.base.Preconditions.checkState(Preconditions.java:534)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+at com.OKTAdmin.base.TestBase.intilization(TestBase.java:56)
 at com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest.Setup(OKTAdminPostDetailScreenForText_PostTest.java:32)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -247,11 +239,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoSuchMethodError -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Create_Text_Post -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="teardown" is-config="true" duration-ms="-1602771093566" started-at="2020-10-15T19:41:33 IST" finished-at="1970-01-01T05:30:00 IST">
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest@5a1c0542]" name="teardown" is-config="true" duration-ms="-1602773084789" started-at="2020-10-15T20:14:44 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
