@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [OKTestedAdmin_Regression_Automation_Test_Cases]">
+  <test thread-count="5" name="OKTestedAdmin_Regression_Automation_Test_Cases(failed)">
+    <classes>
+      <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForVideo_PostTest">
+        <methods>
+          <include name="Verify_Validation_Video_Post"/>
+          <include name="Verify_Multiple_Validation_For_Video_Post"/>
+          <include name="Create_Video_Post"/>
+          <include name="teardown"/>
+          <include name="Verify_Labels"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.OKTAdmin.testcases.OKTAdminPostDetailScreenForVideo_PostTest -->
+      <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest">
+        <methods>
+          <include name="Verify_Multiple_Validation_For_Audio_Post"/>
+          <include name="Verify_Validation_Audio_Post"/>
+          <include name="teardown"/>
+          <include name="Create_Audio_Post"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest -->
+      <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForImage_PostTest">
+        <methods>
+          <include name="Verify_Validation_Poll_Post"/>
+          <include name="Verify_Multiple_Validation_For_Poll_Post"/>
+          <include name="teardown"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.OKTAdmin.testcases.OKTAdminPostDetailScreenForImage_PostTest -->
+      <class name="com.OKTAdmin.testcases.OKTAdminPostScreenTest">
+        <methods>
+          <include name="verifyPost_Link"/>
+          <include name="teardown"/>
+          <include name="verifyClickOnPostScreen_Link"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.OKTAdmin.testcases.OKTAdminPostScreenTest -->
+      <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForPoll_PostTest">
+        <methods>
+          <include name="Verify_Validation_Poll_Post"/>
+          <include name="teardown"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.OKTAdmin.testcases.OKTAdminPostDetailScreenForPoll_PostTest -->
+    </classes>
+  </test> <!-- OKTestedAdmin_Regression_Automation_Test_Cases(failed) -->
+</suite> <!-- Failed suite [OKTestedAdmin_Regression_Automation_Test_Cases] -->
