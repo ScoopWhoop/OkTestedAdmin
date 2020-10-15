@@ -46,9 +46,9 @@ public class TestBase {
 		
 		if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			
-	         WebDriverManager.chromedriver().setup();
+	       //  WebDriverManager.chromedriver().setup();
 			//System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "false");
-			//System.setProperty("webdriver.chrome.driver", "E:\\Automation_Tools\\chromedriver_win32 (1)\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	         ChromeOptions options = new ChromeOptions();
 	         options.addArguments("headless");
 	         // Must maximize Chrome by `start-maximized`
