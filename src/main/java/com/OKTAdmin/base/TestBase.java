@@ -1,7 +1,7 @@
 package com.OKTAdmin.base;
 
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -24,7 +24,7 @@ public class TestBase {
 		try
 		{
 			prop=new Properties();
-			FileInputStream fis=new FileInputStream("..//config//Config.properties");
+			InputStream fis=getClass().getClassLoader().getResourceAsStream("Config.properties");
 			prop.load(fis);
 		}
 		catch(IOException e)
