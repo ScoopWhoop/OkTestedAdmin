@@ -53,23 +53,27 @@ public class OKTAdminLoginPage extends TestBase {
     	LoginWithGoogleButton.click();
     }
 
-    public void GmailEmailOrPhone(String EmailOrPhone)
+    public void GmailEmailOrPhone(String EmailOrPhone) throws InterruptedException
 	{
+    	Thread.sleep(10000);
 		GmailEmailOrPhone.sendKeys(EmailOrPhone);
 	}
 	
-	public void NextButton()
+	public void NextButton() throws InterruptedException
 	{
+		Thread.sleep(10000);
 		NextButton.click();
 	}
 	
-	public void GmailPassword(String Password)
+	public void GmailPassword(String Password) throws InterruptedException
 	{
+		Thread.sleep(10000);
 		GmailPassword.sendKeys(Password);
 	}
 	
-	public void NextButtonPwd() {
+	public void NextButtonPwd() throws InterruptedException {
 		
+		Thread.sleep(10000);
 		NextButtonPwd.click();
 	}
 	
