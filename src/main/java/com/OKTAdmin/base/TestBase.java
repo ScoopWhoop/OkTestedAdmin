@@ -55,12 +55,13 @@ public class TestBase {
 
 			System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments("Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4103.97 Safari/537.36");
 	        options.addArguments("--headless");
 	         // Must maximize Chrome by `start-maximized`
-	        //options.addArguments("start-maximized");
+	        options.addArguments("start-maximized");
 	        //options.addArguments("--window-size=1200,800");
 			driver=new ChromeDriver(options);
-			driver.manage().window().fullscreen();
+			//driver.manage().window().fullscreen();
 			
 		} 
 		else 
