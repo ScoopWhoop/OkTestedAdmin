@@ -57,6 +57,7 @@ public class OKTAdminLoginPage extends TestBase {
 	{
     	Thread.sleep(10000);
 		GmailEmailOrPhone.sendKeys(EmailOrPhone);
+		System.err.println("EmailOrPhone");
 	}
 	
 	public void NextButton() throws InterruptedException
