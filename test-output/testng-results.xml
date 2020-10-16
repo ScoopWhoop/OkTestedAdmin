@@ -1,49 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="332975" started-at="2020-10-16T12:38:47 IST" finished-at="2020-10-16T12:44:20 IST">
+  <suite name="Default suite" duration-ms="1809861" started-at="2020-10-16T17:02:58 IST" finished-at="2020-10-16T17:33:07 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="332975" started-at="2020-10-16T12:38:47 IST" finished-at="2020-10-16T12:44:20 IST">
-      <class name="com.OKTAdmin.testcases.OKTAdminLoginPageTest">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminLoginPageTest@799d4f69]" name="Setup" is-config="true" duration-ms="5081" started-at="2020-10-16T12:38:47 IST" finished-at="2020-10-16T12:38:52 IST">
+    <test name="Default test" duration-ms="1809861" started-at="2020-10-16T17:02:58 IST" finished-at="2020-10-16T17:33:07 IST">
+      <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="Setup" is-config="true" duration-ms="5046" started-at="2020-10-16T17:02:58 IST" finished-at="2020-10-16T17:03:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="verifyOkTestedAdminLoginPageTitle()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminLoginPageTest@799d4f69]" name="verifyOkTestedAdminLoginPageTitle" duration-ms="35031" started-at="2020-10-16T12:38:52 IST" finished-at="2020-10-16T12:39:27 IST">
+        <test-method status="PASS" signature="Verify_Labels()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="Verify_Labels" duration-ms="452374" started-at="2020-10-16T17:03:03 IST" finished-at="2020-10-16T17:10:35 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyOkTestedAdminLoginPageTitle -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminLoginPageTest@799d4f69]" name="teardown" is-config="true" duration-ms="1037" started-at="2020-10-16T12:39:27 IST" finished-at="2020-10-16T12:39:28 IST">
+        </test-method> <!-- Verify_Labels -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="teardown" is-config="true" duration-ms="1060" started-at="2020-10-16T17:10:35 IST" finished-at="2020-10-16T17:10:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminLoginPageTest@799d4f69]" name="Setup" is-config="true" duration-ms="3602" started-at="2020-10-16T12:39:28 IST" finished-at="2020-10-16T12:39:32 IST">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="Setup" is-config="true" duration-ms="3875" started-at="2020-10-16T17:10:36 IST" finished-at="2020-10-16T17:10:40 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="verifyOKTestedLogo()[pri:1, instance:com.OKTAdmin.testcases.OKTAdminLoginPageTest@799d4f69]" name="verifyOKTestedLogo" duration-ms="35075" started-at="2020-10-16T12:39:32 IST" finished-at="2020-10-16T12:40:07 IST">
+        <test-method status="PASS" signature="Verify_Multiple_Validation_For_Audio_Post()[pri:1, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="Verify_Multiple_Validation_For_Audio_Post" duration-ms="382512" started-at="2020-10-16T17:10:40 IST" finished-at="2020-10-16T17:17:02 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyOKTestedLogo -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminLoginPageTest@799d4f69]" name="teardown" is-config="true" duration-ms="960" started-at="2020-10-16T12:40:07 IST" finished-at="2020-10-16T12:40:08 IST">
+        </test-method> <!-- Verify_Multiple_Validation_For_Audio_Post -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="teardown" is-config="true" duration-ms="1111" started-at="2020-10-16T17:17:02 IST" finished-at="2020-10-16T17:17:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminLoginPageTest@799d4f69]" name="Setup" is-config="true" duration-ms="3696" started-at="2020-10-16T12:40:08 IST" finished-at="2020-10-16T12:40:11 IST">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="Setup" is-config="true" duration-ms="3781" started-at="2020-10-16T17:17:04 IST" finished-at="2020-10-16T17:17:07 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="LoginInnOKTestedAdmin()[pri:2, instance:com.OKTAdmin.testcases.OKTAdminLoginPageTest@799d4f69]" name="LoginInnOKTestedAdmin" duration-ms="247004" started-at="2020-10-16T12:40:11 IST" finished-at="2020-10-16T12:44:18 IST">
+        <test-method status="PASS" signature="Verify_Validation_Audio_Post()[pri:2, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="Verify_Validation_Audio_Post" duration-ms="367600" started-at="2020-10-16T17:17:07 IST" finished-at="2020-10-16T17:23:15 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginInnOKTestedAdmin -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminLoginPageTest@799d4f69]" name="teardown" is-config="true" duration-ms="1434" started-at="2020-10-16T12:44:18 IST" finished-at="2020-10-16T12:44:20 IST">
+        </test-method> <!-- Verify_Validation_Audio_Post -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="teardown" is-config="true" duration-ms="816" started-at="2020-10-16T17:23:15 IST" finished-at="2020-10-16T17:23:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.OKTAdmin.testcases.OKTAdminLoginPageTest -->
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="Setup" is-config="true" duration-ms="4543" started-at="2020-10-16T17:23:16 IST" finished-at="2020-10-16T17:23:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="Create_Audio_Post()[pri:3, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="Create_Audio_Post" duration-ms="586052" started-at="2020-10-16T17:23:20 IST" finished-at="2020-10-16T17:33:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Create_Audio_Post -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest@799d4f69]" name="teardown" is-config="true" duration-ms="1047" started-at="2020-10-16T17:33:06 IST" finished-at="2020-10-16T17:33:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
