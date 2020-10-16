@@ -46,13 +46,13 @@ public class TestBase {
 		
 		if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			
-	       //  WebDriverManager.chromedriver().setup();
+	         //WebDriverManager.chromedriver().setup();
 			//System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "false");
 			System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-	        // ChromeOptions options = new ChromeOptions();
-	        // options.addArguments("headless");
+	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments("headless");
 	         // Must maximize Chrome by `start-maximized`
-	         //options.addArguments("start-maximized");
+	         options.addArguments("start-maximized");
 			driver=new ChromeDriver();
 			
 		} 
