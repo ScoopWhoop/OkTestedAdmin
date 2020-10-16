@@ -41,9 +41,9 @@ public class TestUtil extends TestBase{
 					   driver.switchTo().window(Child);
 						Thread.sleep(5000);
 						OKTADLP.GmailEmailOrPhone(prop.getProperty("GmailEmailOrPhone"));
-						Thread.sleep(50000); 
+						Thread.sleep(5000); 
 						OKTADLP.NextButton(); 
-						Thread.sleep(50000);
+						Thread.sleep(5000);
 						OKTADLP.GmailPassword(prop.getProperty("GmailPassword"));
 						Thread.sleep(5000); 
 						OKTADLP.NextButtonPwd(); 
