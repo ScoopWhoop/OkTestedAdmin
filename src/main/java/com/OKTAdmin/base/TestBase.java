@@ -53,7 +53,7 @@ public class TestBase {
 	        options.addArguments("headless");
 	         // Must maximize Chrome by `start-maximized`
 	         options.addArguments("start-maximized");
-			//driver=new ChromeDriver();
+			driver=new ChromeDriver();
 			
 		} 
 		else 
