@@ -54,7 +54,7 @@ public class OKTAdminLoginPageTest extends TestBase {
 	}
 	
 	
-	@Test(priority=2,enabled = false)
+	@Test(priority=2)
 	public  void  LoginInnOKTestedAdmin() throws InterruptedException
 	{
 	
