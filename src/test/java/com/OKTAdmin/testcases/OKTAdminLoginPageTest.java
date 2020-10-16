@@ -47,14 +47,14 @@ public class OKTAdminLoginPageTest extends TestBase {
 	{
 		Thread.sleep(30000);
 		boolean OKTestedLogo=OKTADLP.OKTestedLogo();
-		sa.assertEquals(OKTestedLogo,   true,"OK tested logo is missing on login page");
+		sa.assertEquals(OKTestedLogo,   false,"OK tested logo is missing on login page");
 		sa.assertAll();
 		Thread.sleep(5000);
 
 	}
 	
 	
-	@Test(priority=2,enabled = false)
+	@Test(priority=2)
 	public  void  LoginInnOKTestedAdmin() throws InterruptedException
 	{
 	
