@@ -58,8 +58,9 @@ public class TestBase {
 	        options.addArguments("--headless");
 	         // Must maximize Chrome by `start-maximized`
 	        //options.addArguments("start-maximized");
-	        options.addArguments("--window-size=1200,800");
+	        //options.addArguments("--window-size=1200,800");
 			driver=new ChromeDriver(options);
+			driver.manage().window().fullscreen();
 			
 		} 
 		else 
