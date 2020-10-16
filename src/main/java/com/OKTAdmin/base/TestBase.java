@@ -11,8 +11,6 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;		
-
 
 
 
@@ -49,14 +47,13 @@ public class TestBase {
 		if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
 			
 	         //WebDriverManager.chromedriver().setup();
-			//System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "false");
+			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "false");
 			System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-			
-	        //ChromeOptions options = new ChromeOptions();
-	        //options.addArguments("headless");
+	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments("headless");
 	         // Must maximize Chrome by `start-maximized`
-	         //options.addArguments("start-maximized");
-			driver=new HtmlUnitDriver();
+	         options.addArguments("start-maximized");
+			driver=new ChromeDriver();
 			
 		} 
 		else 
