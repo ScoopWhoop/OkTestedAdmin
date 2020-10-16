@@ -64,6 +64,7 @@ public class OKTAdminLoginPage extends TestBase {
 	{
 		Thread.sleep(10000);
 		NextButton.click();
+		System.out.println("NextButton");
 	}
 	
 	public void GmailPassword(String Password) throws InterruptedException
