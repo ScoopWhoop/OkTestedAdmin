@@ -5,23 +5,10 @@
  
   <test name="OKTestedAdmin_Regression_Automation_Test_Cases">
     <classes>
+    
+     <class name="com.OKTAdmin.testcases.OKTAdminLoginPageTest"/>
       
-       <class name="com.OKTAdmin.testcases.OKTAdminPostScreenTest"/>
-      
-       <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenTest"/>
        
-       <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForLink_PostTest"/>
-        
-       <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForPoll_PostTest"/>
-        
-       <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest"/>
-         
-       <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForImage_PostTest"/>
-         
-       <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest"/>
-         
-       <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForVideo_PostTest"/>
-         
       
  
     </classes>
