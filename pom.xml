@@ -72,7 +72,7 @@
 <version>2.18.1</version>
 <configuration>
 <suiteXmlFiles>
-<suiteXmlFile>Regression.xml</suiteXmlFile>
+<suiteXmlFile>Smoke.xml</suiteXmlFile>
 </suiteXmlFiles>
 </configuration>
 </plugin>
