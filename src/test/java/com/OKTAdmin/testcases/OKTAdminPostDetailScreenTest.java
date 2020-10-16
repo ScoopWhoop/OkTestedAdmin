@@ -51,7 +51,7 @@ public class OKTAdminPostDetailScreenTest extends TestBase {
 		OKTADPDS.Create_button();
 		Thread.sleep(60000);
 		boolean Back_button=OKTADPDS.PostDetail_back_button_Visibility();
-		sa.assertEquals(Back_button, true, "We are verify back button to check create button or Create button is redirecting to Post detail screen ");
+		sa.assertEquals(Back_button, true, "We are verify back button to check Create button is redirecting to Post detail screen ");
 		sa.assertAll();
 		 
 	}

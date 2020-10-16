@@ -10,8 +10,6 @@ import org.testng.asserts.SoftAssert;
 import com.OKTAdmin.base.TestBase;
 import com.OKTAdmin.pages.OKTAdminLoginPage;
 import com.OKTAdmin.pages.OKTAdminPostDetailScreenForImage_Post;
-import com.OKTAdmin.pages.OKTAdminPostDetailScreenForLink_Post;
-import com.OKTAdmin.pages.OKTAdminPostDetailScreenForPoll_Post;
 import com.OKTAdmin.pages.OKTAdminPostScreen;
 import com.OKTAdmin.utils.TestUtil;
 
@@ -176,6 +174,11 @@ public class OKTAdminPostDetailScreenForImage_PostTest extends TestBase {
 		sa.assertAll();
 		OKTADDPSIP.PostDetail_Create_button();
 		Thread.sleep(5000);
+		
+		String Validation_CreatedSuccessfully=OKTADDPSIP.Validation_CreatedSuccessfully();
+		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully", "Created successfully validation is missing");
+		Thread.sleep(5000);
+		sa.assertAll();
 		
 		System.out.println("OKTAdminPostDetailScreenForImage_PostTest - Test cases has been executed");
 	}

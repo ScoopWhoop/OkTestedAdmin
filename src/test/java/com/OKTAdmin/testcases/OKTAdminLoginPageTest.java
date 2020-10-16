@@ -47,14 +47,14 @@ public class OKTAdminLoginPageTest extends TestBase {
 	{
 		Thread.sleep(30000);
 		boolean OKTestedLogo=OKTADLP.OKTestedLogo();
-		sa.assertEquals(OKTestedLogo,   false,"OK tested logo is missing on login page");
+		sa.assertEquals(OKTestedLogo,   true,"OK tested logo is missing on login page");
 		sa.assertAll();
 		Thread.sleep(5000);
 
 	}
 	
 	
-	@Test(priority=2)
+	@Test(priority=2,enabled = false)
 	public  void  LoginInnOKTestedAdmin() throws InterruptedException
 	{
 	
@@ -69,6 +69,7 @@ public class OKTAdminLoginPageTest extends TestBase {
 		Thread.sleep(5000);
 		
 		System.out.println("OKTAdminLoginPageTest - Test cases has been executed");
+		
 	}
 	
 	

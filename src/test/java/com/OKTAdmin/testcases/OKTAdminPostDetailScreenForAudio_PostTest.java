@@ -10,9 +10,6 @@ import org.testng.asserts.SoftAssert;
 import com.OKTAdmin.base.TestBase;
 import com.OKTAdmin.pages.OKTAdminLoginPage;
 import com.OKTAdmin.pages.OKTAdminPostDetailScreenForAudio_Post;
-import com.OKTAdmin.pages.OKTAdminPostDetailScreenForImage_Post;
-import com.OKTAdmin.pages.OKTAdminPostDetailScreenForLink_Post;
-import com.OKTAdmin.pages.OKTAdminPostDetailScreenForPoll_Post;
 import com.OKTAdmin.pages.OKTAdminPostScreen;
 import com.OKTAdmin.utils.TestUtil;
 
@@ -177,13 +174,13 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 	
 		
 		TU.Audio_File_Upload();
-		Thread.sleep(90000);
+		Thread.sleep(60000);
 		boolean Attachment_Media_Preview=OKTADDSAP.Attachment_Media_Preview();
 		sa.assertEquals(Attachment_Media_Preview, true, "Attachment Media preview is missing");
-		Thread.sleep(10000);
+		Thread.sleep(9000);
 		
 		TU.Thumbnail_File_Upload();
-		Thread.sleep(90000);
+		Thread.sleep(60000);
 		boolean Attachment_Thumbnail_Preview=OKTADDSAP.Attachment_Thumbnail_Preview();
 		sa.assertEquals(Attachment_Thumbnail_Preview, true, "Attachment Thumbnail preview is missing");
 		Thread.sleep(10000);
