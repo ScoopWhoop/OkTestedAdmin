@@ -54,10 +54,10 @@ public class TestBase {
 			//System.setProperty("webdriver.chrome.driver", "E:\\Automation_Tools\\chromedriver_win32 (1)\\chromedriver.exe");
 
 			System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-	       // ChromeOptions options = new ChromeOptions();
-	       // options.addArguments("--headless");
+	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments("--headless");
 	         // Must maximize Chrome by `start-maximized`
-	        //options.addArguments("start-maximized");
+	        options.addArguments("start-maximized");
 			driver=new ChromeDriver();
 			
 		} 
@@ -70,7 +70,7 @@ public class TestBase {
 		}
 		 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get(prop.getProperty("Url"));
 			}
