@@ -40,6 +40,9 @@ public class OKTAdminPostDetailScreenForLink_Post extends TestBase {
     @FindBy(xpath = "//div[text()='Description cannot be blank']")
     WebElement Validation_DescriptionCannotBeBlank;
     
+    @FindBy(xpath = "//div[text()='Created successfully']")
+    WebElement Validation_CreatedSuccessfully;
+    
     @FindBy(xpath = "//input[@name='link']")
     WebElement Textbox_LinkUrl;
     
@@ -145,6 +148,14 @@ public class OKTAdminPostDetailScreenForLink_Post extends TestBase {
 	{
 		 return Validation_LinkCannotBeBlank.getText();
 	}
+	
+
+	public String Validation_CreatedSuccessfully() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Validation_CreatedSuccessfully.getText();
+	  }
+	
 	
 	
 	public String Dropdown_PostType_Label() throws InterruptedException

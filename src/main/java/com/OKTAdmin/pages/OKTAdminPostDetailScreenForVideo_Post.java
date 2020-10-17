@@ -40,6 +40,10 @@ public class OKTAdminPostDetailScreenForVideo_Post extends TestBase {
     @FindBy(xpath = "//div[text()='Filename or File can not be blank']")
     WebElement Validation_FilenameOrFilCannotBeBlank;
     
+    @FindBy(xpath = "//div[text()='Created successfully']")
+    WebElement Validation_CreatedSuccessfully;
+    
+    
     @FindBy(xpath = "//img[@class='img-thumbnail']")
     WebElement Attachment_Thumbnail_Preview;
     
@@ -150,6 +154,12 @@ public class OKTAdminPostDetailScreenForVideo_Post extends TestBase {
 		 return Validation_FilenameOrFilCannotBeBlank.getText();
 	}
 	
+	public String Validation_CreatedSuccessfully() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Validation_CreatedSuccessfully.getText();
+	  }
+		
 	
 	public void Media_Browse_button() throws InterruptedException
 	{

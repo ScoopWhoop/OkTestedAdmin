@@ -143,7 +143,7 @@ public class OKTAdminPostDetailScreenForText_Post extends TestBase {
 	public String Validation_CreatedSuccessfully() throws InterruptedException
 	  {
 		 Thread.sleep(5000);
-		 return Validation_CreatedSuccessfully();
+		 return Validation_CreatedSuccessfully.getText();
 	  }
 		
 	

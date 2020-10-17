@@ -76,14 +76,14 @@ public class OKTAdminPostDetailScreenForText_PostTest extends TestBase {
 	@Test(priority=1)
 	public void Verify_Multiple_Validation_For_Text_Post() throws InterruptedException
 	{
-	
+
 		Thread.sleep(50000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
 		TU.GmailWindow();
 		Thread.sleep(40000);
 		OKTADPS.PostScreen_Link();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		OKTADPDSTP.Create_button();
 		Thread.sleep(10000);
 		

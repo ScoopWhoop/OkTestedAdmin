@@ -154,6 +154,11 @@ public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 		OKTADPDSLP.PostDetail_Create_button();
 		Thread.sleep(5000);
 		
+		String Validation_CreatedSuccessfully=OKTADPDSLP.Validation_CreatedSuccessfully();
+		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully", "Created successfully validation is missing");
+		Thread.sleep(5000);
+		sa.assertAll();
+		
 		System.out.println("OKTAdminPostDetailScreenForLink_PostTest - Test cases has been executed");
 
 	}

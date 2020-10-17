@@ -191,6 +191,11 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 		OKTADDSVP.PostDetail_Create_button();
 		Thread.sleep(5000);
 		
+		String Validation_CreatedSuccessfully=OKTADDSVP.Validation_CreatedSuccessfully();
+		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully", "Created successfully");
+		Thread.sleep(5000);
+		sa.assertAll();
+		
 		System.out.println("OKTAdminPostDetailScreenForVideo_PostTest - Test cases has been executed");
 
 	}

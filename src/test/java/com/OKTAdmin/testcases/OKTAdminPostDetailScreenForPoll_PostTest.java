@@ -9,7 +9,6 @@ import org.testng.asserts.SoftAssert;
 
 import com.OKTAdmin.base.TestBase;
 import com.OKTAdmin.pages.OKTAdminLoginPage;
-import com.OKTAdmin.pages.OKTAdminPostDetailScreenForLink_Post;
 import com.OKTAdmin.pages.OKTAdminPostDetailScreenForPoll_Post;
 import com.OKTAdmin.pages.OKTAdminPostScreen;
 import com.OKTAdmin.utils.TestUtil;
@@ -119,7 +118,7 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 		sa.assertAll();
 		 
 	}
-	
+
 	
 	@Test(priority=2)
 	public void Verify_Validation_Poll_Post() throws InterruptedException
@@ -187,9 +186,13 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 		sa.assertEquals(Attachment_Media_Preview, true, "Attachment Media Preview is missing");
 		Thread.sleep(60000);
 		OKTADPDSPP.PostDetail_Create_button();
-		
-		sa.assertAll();
+	
 		Thread.sleep(5000);
+		
+		String Validation_CreatedSuccessfully=OKTADPDSPP.Validation_CreatedSuccessfully();
+		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully", "Created successfully validation is missing");
+		Thread.sleep(5000);
+		sa.assertAll();
 		
 		System.out.println("OKTAdminPostDetailScreenForPoll_PostTest - Test cases has been executed");
 
