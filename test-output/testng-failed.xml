@@ -3,15 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.OKTAdmin.testcases.OKTAdminLoginPageTest">
+      <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForVideo_PostTest">
         <methods>
-          <include name="LoginInnOKTestedAdmin"/>
-          <include name="verifyOKTestedLogo"/>
-          <include name="verifyOkTestedAdminLoginPageTitle"/>
-          <include name="Setup"/>
+          <include name="Verify_Validation_Video_Post"/>
+          <include name="Verify_Multiple_Validation_For_Video_Post"/>
+          <include name="Create_Video_Post"/>
           <include name="teardown"/>
+          <include name="Verify_Labels"/>
+          <include name="Setup"/>
         </methods>
-      </class> <!-- com.OKTAdmin.testcases.OKTAdminLoginPageTest -->
+      </class> <!-- com.OKTAdmin.testcases.OKTAdminPostDetailScreenForVideo_PostTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
