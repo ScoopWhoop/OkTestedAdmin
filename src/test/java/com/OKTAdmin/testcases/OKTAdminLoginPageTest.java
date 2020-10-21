@@ -73,6 +73,8 @@ public class OKTAdminLoginPageTest extends TestBase {
 		
 		System.out.println("OKTAdminLoginPageTest - Test cases has been executed");
 		
+		String GetCurrentURL=driver.getCurrentUrl();
+		System.out.println(GetCurrentURL);
 	}
 	
 	
