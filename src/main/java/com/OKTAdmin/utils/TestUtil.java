@@ -5,7 +5,14 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
 import java.util.Set;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import com.OKTAdmin.base.TestBase;
 import com.OKTAdmin.pages.OKTAdminLoginPage;
@@ -31,7 +38,7 @@ public class TestUtil extends TestBase{
 			Set<String> AllWindow = driver.getWindowHandles();
 			int TotalWindows= AllWindow.size();
 			System.out.println(TotalWindows);
-					
+				
 			System.out.println(AllWindow);
 			
 			for(String Child:AllWindow)
@@ -39,15 +46,15 @@ public class TestUtil extends TestBase{
 				if(!SWParentWindow.equalsIgnoreCase(Child))
 				{
 					   driver.switchTo().window(Child);
-						Thread.sleep(5000);
+						//Thread.sleep(5000);
 						OKTADLP.GmailEmailOrPhone(prop.getProperty("GmailEmailOrPhone"));
-						Thread.sleep(5000); 
+						//Thread.sleep(5000); 
 						OKTADLP.NextButton(); 
-						Thread.sleep(5000);
+						//Thread.sleep(5000);
 						OKTADLP.GmailPassword(prop.getProperty("GmailPassword"));
-						Thread.sleep(5000); 
+						//Thread.sleep(5000); 
 						OKTADLP.NextButtonPwd(); 
-						Thread.sleep(5000);
+						//Thread.sleep(5000);
 					
 				}
 			}
@@ -282,5 +289,40 @@ public class TestUtil extends TestBase{
 			 robot.keyRelease(KeyEvent.VK_ENTER);
 			 
 			}
+		
+		
+		public  static void FailedTestcaseScreensShot(String ScreenShot)
+		
+		{
+			
+			File file= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			
+			try {
+				
+				FileUtils.copyFile(file, new File("./ScreenShots/"+ScreenShot+".png"));
+				
+			    }
+			    catch (IOException e) 
+			{
+				
+				e.printStackTrace();
+		    }		
+			
+		}
+		
+		public void Scrolldown()
+		
+		{
+			System.out.println("1");
+			((JavascriptExecutor)driver).executeScript("window.scrollBy(0,400)", "");
+			System.out.println("2");
+			
+		}
+			
+			
+			
+		
+		
+
 
 }

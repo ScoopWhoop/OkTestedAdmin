@@ -2,6 +2,7 @@ package com.OKTAdmin.testcases;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -9,8 +10,10 @@ import com.OKTAdmin.base.TestBase;
 import com.OKTAdmin.pages.OKTAdminLoginPage;
 import com.OKTAdmin.pages.OKTAdminPostDetailScreenForText_Post;
 import com.OKTAdmin.pages.OKTAdminPostScreen;
+import com.OKTAdmin.utils.CustomListener;
 import com.OKTAdmin.utils.TestUtil;
 
+@Listeners(CustomListener.class)
 public class OKTAdminPostDetailScreenForText_PostTest extends TestBase {
 	
 	public  OKTAdminPostDetailScreenForText_Post OKTADPDSTP;
@@ -25,7 +28,6 @@ public class OKTAdminPostDetailScreenForText_PostTest extends TestBase {
 		super();
 	}
 
-
 	@BeforeMethod
 	public void Setup()
 	{
@@ -37,18 +39,18 @@ public class OKTAdminPostDetailScreenForText_PostTest extends TestBase {
 	    sa=new SoftAssert();
 	}
 	
-	
+
 	@Test(priority=0)
 	public void Verify_Labels() throws InterruptedException
 	{
 		
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(60000);
 		TU.GmailWindow();
-		Thread.sleep(60000);
-		OKTADPS.PostScreen_Link();
-		Thread.sleep(50000);
+		Thread.sleep(5000);
+		OKTADPS.PostScreen_Link();                                        
+		Thread.sleep(5000);
 		OKTADPDSTP.Create_button();
 		Thread.sleep(5000);
 
@@ -77,15 +79,15 @@ public class OKTAdminPostDetailScreenForText_PostTest extends TestBase {
 	public void Verify_Multiple_Validation_For_Text_Post() throws InterruptedException
 	{
 
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(40000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		OKTADPDSTP.Create_button();
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		OKTADPDSTP.Select_PostType(prop.getProperty("PostType_Text"));
 		
@@ -93,32 +95,32 @@ public class OKTAdminPostDetailScreenForText_PostTest extends TestBase {
 		String Validation_PleaseSelectUser=OKTADPDSTP.Validation_PleaseSelectUser();
 		sa.assertEquals(Validation_PleaseSelectUser, "Please select user", "Please select user validation is missing");
 		OKTADPDSTP.Select_User(prop.getProperty("User"));
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		OKTADPDSTP.PostDetail_Create_button();
 		String Validation_PleaseSelectCommunity=OKTADPDSTP.Validation_PleaseSelectCommunity();
 		sa.assertEquals(Validation_PleaseSelectCommunity, "Please select community", "Please select community validation is missing");
 		OKTADPDSTP.Select_Community(prop.getProperty("Community"));
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		OKTADPDSTP.PostDetail_Create_button();
 		String Validation_DescriptionCannotBeBlank=OKTADPDSTP.Validation_DescriptionCannotBeBlank();
 		sa.assertEquals(Validation_DescriptionCannotBeBlank, "Description can not be blank", "Description can not be blank validation is missing");
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		sa.assertAll();
 		 
 	}
 	
 	
 	@Test(priority=2)
-	public void Create_Text_Post() throws InterruptedException
+	public void CreateAndUpdate_Text_Post() throws InterruptedException
 	{
 		
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
 		Thread.sleep(5000);
 		OKTADPDSTP.Create_button();
@@ -138,6 +140,21 @@ public class OKTAdminPostDetailScreenForText_PostTest extends TestBase {
 		sa.assertAll();
 		
 		System.out.println("OKTAdminPostDetailScreenForText_PostTest - Test cases has been executed");
+		
+		Thread.sleep(5000);
+		
+		OKTADPDSTP.TextPostsEdit();
+		
+		OKTADPDSTP.UpdateDescription_Textbox(prop.getProperty("UpdateDescriptionTextPost"));
+		
+		OKTADPDSTP.Updatebutton();
+		
+		Thread.sleep(5000);
+		
+		String Validation_UpdatedSuccessfully=OKTADPDSTP.Validation_UpdatedSuccessfully();
+		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully", "Updated successfully");
+		Thread.sleep(5000);
+		sa.assertAll();
 
 	}
 

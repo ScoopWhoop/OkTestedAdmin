@@ -3,6 +3,7 @@ package com.OKTAdmin.pages;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -53,6 +54,8 @@ public class OKTAdminPostDetailScreen extends TestBase {
     
     @FindBy(xpath ="//input[@name='description']")
     WebElement Desscription_Textbox;
+   
+    
     
 	public OKTAdminPostDetailScreen()
 	{
@@ -132,6 +135,7 @@ public class OKTAdminPostDetailScreen extends TestBase {
 	}
 	
 	public void Total_PostType_Dropdown_Value()
+	
 	{
 		          
 		Select select =new Select(PostType_Dropdown);
@@ -146,6 +150,14 @@ public class OKTAdminPostDetailScreen extends TestBase {
 			System.out.println(Total_PostType_Dropdown_Value_Name);
 		}
 		               
+	}
+	
+	public void Createbutton_BackgroundColor()
+	{
+		String Createbutton_backgroundColor=PostDetail_Create_button.getCssValue("background-color");
+		System.out.println(Createbutton_backgroundColor);
+		String Createbutton_backgroundColor_HexFormat=Color.fromString(Createbutton_backgroundColor).asHex();
+		System.out.println(Createbutton_backgroundColor_HexFormat);
 	}
 	
 }

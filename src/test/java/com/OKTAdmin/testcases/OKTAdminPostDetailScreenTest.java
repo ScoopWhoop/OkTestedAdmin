@@ -2,6 +2,7 @@ package com.OKTAdmin.testcases;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -9,8 +10,10 @@ import com.OKTAdmin.base.TestBase;
 import com.OKTAdmin.pages.OKTAdminLoginPage;
 import com.OKTAdmin.pages.OKTAdminPostDetailScreen;
 import com.OKTAdmin.pages.OKTAdminPostScreen;
+import com.OKTAdmin.utils.CustomListener;
 import com.OKTAdmin.utils.TestUtil;
 
+@Listeners(CustomListener.class)
 public class OKTAdminPostDetailScreenTest extends TestBase {
 	
 	public  OKTAdminPostDetailScreen OKTADPDS;
@@ -41,15 +44,15 @@ public class OKTAdminPostDetailScreenTest extends TestBase {
 	public void Click_On_Create_button() throws InterruptedException
 	{
 	
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(40000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPDS.Create_button();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		boolean Back_button=OKTADPDS.PostDetail_back_button_Visibility();
 		sa.assertEquals(Back_button, true, "We are verify back button to check Create button is redirecting to Post detail screen ");
 		sa.assertAll();
@@ -61,13 +64,13 @@ public class OKTAdminPostDetailScreenTest extends TestBase {
 	public void verify_All_PostDetail_Label() throws InterruptedException
 	{
 		
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPDS.Create_button();
 		Thread.sleep(5000);
 		
@@ -96,11 +99,11 @@ public class OKTAdminPostDetailScreenTest extends TestBase {
 	public void verifyTotal_PostType_Dropdown_Value() throws InterruptedException
 	
 	{
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
 		OKTADPDS.Create_button();
 		Thread.sleep(5000);
@@ -110,6 +113,8 @@ public class OKTAdminPostDetailScreenTest extends TestBase {
 		Thread.sleep(5000);
 		 
 		System.out.println("OKTAdminPostDetailScreenTest - Test cases has been executed");
+		
+		OKTADPDS.Createbutton_BackgroundColor();
 
 
 	}

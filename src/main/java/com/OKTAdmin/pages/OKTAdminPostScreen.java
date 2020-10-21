@@ -1,12 +1,15 @@
 package com.OKTAdmin.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.OKTAdmin.base.TestBase;
 
 public class OKTAdminPostScreen extends TestBase {
+	
+	Actions actions=new Actions(driver);
 	
 	@FindBy(xpath = "//a[@href='/posts']")
 	WebElement PostScreen_Link;
@@ -47,8 +50,10 @@ public class OKTAdminPostScreen extends TestBase {
 	{
 		          
 		return Create_button.isDisplayed();
+
 		
 	}
+	
 	
 	
 }

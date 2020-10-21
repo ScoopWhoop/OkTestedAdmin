@@ -4,6 +4,7 @@ import java.awt.AWTException;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -11,8 +12,10 @@ import com.OKTAdmin.base.TestBase;
 import com.OKTAdmin.pages.OKTAdminLoginPage;
 import com.OKTAdmin.pages.OKTAdminPostDetailScreenForAudio_Post;
 import com.OKTAdmin.pages.OKTAdminPostScreen;
+import com.OKTAdmin.utils.CustomListener;
 import com.OKTAdmin.utils.TestUtil;
 
+@Listeners(CustomListener.class)
 public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 	
 	public OKTAdminPostDetailScreenForAudio_Post OKTADDSAP;
@@ -43,16 +46,16 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 	@Test(priority=0)
 	public void Verify_Labels() throws InterruptedException
 	{
-		
+	
 		Thread.sleep(50000);
 		OKTADLP.LoginWithGoogleButton();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		TU.GmailWindow();
 		Thread.sleep(90000);
 		OKTADPS.PostScreen_Link();
 		Thread.sleep(50000);
 		OKTADDSAP.Create_button();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 
 		OKTADDSAP.Select_PostType(prop.getProperty("PostType_Audio"));
 		Thread.sleep(5000);
@@ -93,13 +96,13 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 	
 		Thread.sleep(50000);
 		OKTADLP.LoginWithGoogleButton();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		TU.GmailWindow();
 		Thread.sleep(60000);
 		OKTADPS.PostScreen_Link();
 		Thread.sleep(5000);
 		OKTADDSAP.Create_button();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		
 		OKTADDSAP.Select_PostType(prop.getProperty("PostType_Audio"));
 		Thread.sleep(5000);
@@ -115,7 +118,7 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 		String Validation_PleaseSelectCommunity=OKTADDSAP.Validation_PleaseSelectCommunity();
 		sa.assertEquals(Validation_PleaseSelectCommunity, "Please select community", "Please select community validation is missing");
 		OKTADDSAP.Select_Community(prop.getProperty("Community"));
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		 
 	}
@@ -129,11 +132,11 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(60000);
 		TU.GmailWindow();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
 		Thread.sleep(5000);
 		OKTADDSAP.Create_button();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		
 		OKTADDSAP.Select_PostType(prop.getProperty("PostType_Audio"));
 		OKTADDSAP.Select_PostStatus(prop.getProperty("PostStatus"));
@@ -143,7 +146,7 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 		OKTADDSAP.PostDetail_Create_button();
 		String Validation_FilenameOrFilCannotBeBlank=OKTADDSAP.Validation_FilenameOrFilCannotBeBlank();
 		sa.assertEquals(Validation_FilenameOrFilCannotBeBlank, "Filename or File can not be blank", "Filename or File can not be blank" + " validation is missing");
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		sa.assertAll();
 				 
 	}
@@ -155,15 +158,15 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 	public void Create_Audio_Post() throws InterruptedException, AWTException
 	{
 		
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		TU.GmailWindow();
 		Thread.sleep(60000);
 		OKTADPS.PostScreen_Link();
 		Thread.sleep(50000);
 		OKTADDSAP.Create_button();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		
 		OKTADDSAP.Select_PostType(prop.getProperty("PostType_Audio"));
 		OKTADDSAP.Select_PostStatus(prop.getProperty("PostStatus"));
@@ -174,16 +177,16 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 	
 		
 		TU.Audio_File_Upload();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		boolean Attachment_Media_Preview=OKTADDSAP.Attachment_Media_Preview();
 		sa.assertEquals(Attachment_Media_Preview, true, "Attachment Media preview is missing");
-		Thread.sleep(9000);
+		Thread.sleep(5000);
 		
 		TU.Thumbnail_File_Upload();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		boolean Attachment_Thumbnail_Preview=OKTADDSAP.Attachment_Thumbnail_Preview();
 		sa.assertEquals(Attachment_Thumbnail_Preview, true, "Attachment Thumbnail preview is missing");
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		sa.assertAll();
 		OKTADDSAP.PostDetail_Create_button();
 		Thread.sleep(5000);
@@ -194,7 +197,25 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 		sa.assertAll();
 		
 		System.out.println("OKTAdminPostDetailScreenForAudio_PostTest - Test cases has been executed");
-	}
+	
+
+	
+		Thread.sleep(5000);
+		
+		OKTADDSAP.TextPostsEdit();
+		
+		OKTADDSAP.UpdateDescription_Textbox(prop.getProperty("UpdateDescriptionAudioPost"));
+		
+		OKTADDSAP.Updatebutton();
+		
+		Thread.sleep(5000);
+		
+		String Validation_UpdatedSuccessfully=OKTADDSAP.Validation_UpdatedSuccessfully();
+		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully", "Updated successfully");
+		Thread.sleep(5000);
+		sa.assertAll();
+	
+		}
 	
 	@AfterMethod
 	public void teardown()

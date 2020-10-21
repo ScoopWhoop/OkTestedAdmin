@@ -2,6 +2,7 @@ package com.OKTAdmin.testcases;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -9,8 +10,10 @@ import com.OKTAdmin.base.TestBase;
 import com.OKTAdmin.pages.OKTAdminLoginPage;
 import com.OKTAdmin.pages.OKTAdminPostDetailScreenForLink_Post;
 import com.OKTAdmin.pages.OKTAdminPostScreen;
+import com.OKTAdmin.utils.CustomListener;
 import com.OKTAdmin.utils.TestUtil;
 
+@Listeners(CustomListener.class)
 public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 	
 	public OKTAdminPostDetailScreenForLink_Post OKTADPDSLP;
@@ -40,15 +43,15 @@ public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 	public void Verify_Labels() throws InterruptedException
 	{
 		
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
 		Thread.sleep(50000);
 		OKTADPDSLP.Create_button();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 
 		OKTADPDSLP.Select_PostType(prop.getProperty("PostType_Link"));
 		Thread.sleep(5000);
@@ -80,11 +83,11 @@ public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(40000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
 		Thread.sleep(5000);
 		OKTADPDSLP.Create_button();
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		OKTADPDSLP.Select_PostType(prop.getProperty("PostType_Link"));
 		Thread.sleep(5000);
@@ -93,13 +96,13 @@ public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 		sa.assertEquals(Validation_PleaseSelectUser, "Please select user", "Please select user validation is missing");
 		Thread.sleep(10000);
 		OKTADPDSLP.Select_User(prop.getProperty("User"));
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		OKTADPDSLP.PostDetail_Create_button();
 		String Validation_PleaseSelectCommunity=OKTADPDSLP.Validation_PleaseSelectCommunity();
 		sa.assertEquals(Validation_PleaseSelectCommunity, "Please select community", "Please select community validation is missing");
 		OKTADPDSLP.Select_Community(prop.getProperty("Community"));
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		 
 	}
 	
@@ -112,11 +115,11 @@ public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
 		Thread.sleep(5000);
 		OKTADPDSLP.Create_button();
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		OKTADPDSLP.Select_PostType(prop.getProperty("PostType_Link"));
 		OKTADPDSLP.Select_PostStatus(prop.getProperty("PostStatus"));
@@ -126,7 +129,7 @@ public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 		OKTADPDSLP.PostDetail_Create_button();
 		String Validation_LinkCannotBeBlank=OKTADPDSLP.Validation_LinkCannotBeBlank();
 		sa.assertEquals(Validation_LinkCannotBeBlank, "link can not be blank", "Link can not be blank validation is missing");
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		sa.assertAll();
 				 
 	}
@@ -135,11 +138,11 @@ public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 	public void Create_Link_Post() throws InterruptedException
 	{
 		
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(40000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
 		Thread.sleep(5000);
 		OKTADPDSLP.Create_button();
@@ -160,6 +163,22 @@ public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 		sa.assertAll();
 		
 		System.out.println("OKTAdminPostDetailScreenForLink_PostTest - Test cases has been executed");
+		
+		Thread.sleep(5000);
+		
+		OKTADPDSLP.TextPostsEdit();
+		
+		OKTADPDSLP.UpdateDescription_Textbox(prop.getProperty("UpdateDescriptionLinkPost"));
+		
+		OKTADPDSLP.Updatebutton();
+		
+		Thread.sleep(5000);
+		
+		String Validation_UpdatedSuccessfully=OKTADPDSLP.Validation_UpdatedSuccessfully();
+		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully", "Updated successfully");
+		Thread.sleep(5000);
+		sa.assertAll();
+
 
 	}
 

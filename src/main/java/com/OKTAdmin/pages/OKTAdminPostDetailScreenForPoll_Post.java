@@ -84,6 +84,23 @@ public class OKTAdminPostDetailScreenForPoll_Post extends TestBase {
     @FindBy(xpath = "//div[@class='position-relative clr-grey custom custom-file']")
     WebElement Media_Browse_button;
     
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//a[@class='text-dark']")
+    WebElement ThreeDotIcon;
+    
+
+    @FindBy(xpath = "//a[@class='dropdown-item']")
+    WebElement EditOption;
+    
+    @FindBy(xpath = "//textarea[@name='description']")
+  	WebElement UpdatedDescription_Textbox;
+    
+    @FindBy(xpath = "//div[text()='Updated successfully']")
+    WebElement Validation_UpdatedSuccessfully;
+    
+    @FindBy(xpath = "//div[@class='col']//button[@type='button']")
+    WebElement Update_button;
+   
+    
     
 	public OKTAdminPostDetailScreenForPoll_Post()
 	{
@@ -242,6 +259,37 @@ public class OKTAdminPostDetailScreenForPoll_Post extends TestBase {
 	{
 		PostDetail_Create_button.click();
 	}
+	
+	public void TextPostsEdit() throws InterruptedException
+	{
+			
+		ThreeDotIcon.click();
+		Thread.sleep(5000);
+		EditOption.click();
+	}
+	
+
+	public void UpdateDescription_Textbox(String UpdateDescription) throws InterruptedException
+	{
+		 Thread.sleep(5000);
+		 UpdatedDescription_Textbox.clear();
+		 UpdatedDescription_Textbox.sendKeys(UpdateDescription);
+	}
+	
+	
+
+	public void Updatebutton() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 Update_button.click();
+	  }
+	
+	public String Validation_UpdatedSuccessfully() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Validation_UpdatedSuccessfully.getText();
+	  }
+	
 		               
 	}
 		               

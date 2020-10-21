@@ -49,33 +49,33 @@ public class OKTAdminLoginPage extends TestBase {
     
     public void LoginWithGoogleButton() throws InterruptedException
     {
-    	Thread.sleep(10000);
+    	Thread.sleep(5000);
     	LoginWithGoogleButton.click();
     }
 
     public void GmailEmailOrPhone(String EmailOrPhone) throws InterruptedException
 	{
-    	Thread.sleep(10000);
+    	Thread.sleep(5000);
 		GmailEmailOrPhone.sendKeys(EmailOrPhone);
 		System.out.println("EmailOrPhone");
 	}
-	
+
 	public void NextButton() throws InterruptedException
 	{
-		Thread.sleep(10000);
+		
 		NextButton.click();
 		System.out.println("NextButton");
 	}
 	
 	public void GmailPassword(String Password) throws InterruptedException
 	{
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		GmailPassword.sendKeys(Password);
 	}
 	
 	public void NextButtonPwd() throws InterruptedException {
 		
-		Thread.sleep(10000);
+		
 		NextButtonPwd.click();
 	}
 	

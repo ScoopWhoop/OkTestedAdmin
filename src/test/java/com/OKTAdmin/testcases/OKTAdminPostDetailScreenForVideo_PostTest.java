@@ -4,6 +4,7 @@ import java.awt.AWTException;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -15,8 +16,10 @@ import com.OKTAdmin.pages.OKTAdminPostDetailScreenForLink_Post;
 import com.OKTAdmin.pages.OKTAdminPostDetailScreenForPoll_Post;
 import com.OKTAdmin.pages.OKTAdminPostDetailScreenForVideo_Post;
 import com.OKTAdmin.pages.OKTAdminPostScreen;
+import com.OKTAdmin.utils.CustomListener;
 import com.OKTAdmin.utils.TestUtil;
 
+@Listeners(CustomListener.class)
 public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 	
 	public OKTAdminPostDetailScreenForVideo_Post OKTADDSVP;
@@ -30,7 +33,6 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 		
 		super();
 	}
-
 
 	@BeforeMethod
 	public void Setup()
@@ -47,13 +49,13 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 	public void Verify_Labels() throws InterruptedException
 	{
 		
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADDSVP.Create_button();
 		Thread.sleep(5000);
 
@@ -94,15 +96,15 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 	public void Verify_Multiple_Validation_For_Video_Post() throws InterruptedException
 	{
 		
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADDSVP.Create_button();
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		OKTADDSVP.Select_PostType(prop.getProperty("PostType_Video"));
 		Thread.sleep(5000);
@@ -111,14 +113,14 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 		String Validation_PleaseSelectUser=OKTADDSVP.Validation_PleaseSelectUser();
 		sa.assertEquals(Validation_PleaseSelectUser, "Please select user", "Please select user validation is missing");
 		OKTADDSVP.Select_User(prop.getProperty("User"));
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		OKTADDSVP.PostDetail_Create_button();
 		Thread.sleep(5000);
 		String Validation_PleaseSelectCommunity=OKTADDSVP.Validation_PleaseSelectCommunity();
 		sa.assertEquals(Validation_PleaseSelectCommunity, "Please select community", "Please select community validation is missing");
 		OKTADDSVP.Select_Community(prop.getProperty("Community"));
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		 
 	}
@@ -128,13 +130,13 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 	public void Verify_Validation_Video_Post() throws InterruptedException
 	{
 		
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADDSVP.Create_button();
 		Thread.sleep(5000);
 		
@@ -146,7 +148,7 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 		OKTADDSVP.PostDetail_Create_button();
 		String Validation_FilenameOrFilCannotBeBlank=OKTADDSVP.Validation_FilenameOrFilCannotBeBlank();
 		sa.assertEquals(Validation_FilenameOrFilCannotBeBlank, "Filename or File can not be blank", "Filename or File can not be blank" + " validation is missing");
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		sa.assertAll();
 				 
 	}
@@ -155,16 +157,16 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 	
 	
 	@Test(priority=3)
-	public void Create_Video_Post() throws InterruptedException, AWTException
+	public void CreateAndUpdate_Video_Post() throws InterruptedException, AWTException
 	{
 		
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		OKTADDSVP.Create_button();
 		Thread.sleep(5000);
 		
@@ -177,16 +179,16 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 	
 		
 		TU.Video_File_Upload();
-		Thread.sleep(90000);
+		Thread.sleep(5000);
 		boolean Attachment_Media_Preview=OKTADDSVP.Attachment_Media_Preview();
 		sa.assertEquals(Attachment_Media_Preview, true, "Attachment Media preview is missing");
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		TU.Thumbnail_File_Upload();
-		Thread.sleep(90000);
+		Thread.sleep(5000);
 		boolean Attachment_Thumbnail_Preview=OKTADDSVP.Attachment_Thumbnail_Preview();
 		sa.assertEquals(Attachment_Thumbnail_Preview, true, "Attachment Thumbnail preview is missing");
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		sa.assertAll();
 		OKTADDSVP.PostDetail_Create_button();
 		Thread.sleep(5000);
@@ -197,6 +199,22 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 		sa.assertAll();
 		
 		System.out.println("OKTAdminPostDetailScreenForVideo_PostTest - Test cases has been executed");
+		
+        Thread.sleep(5000);
+		
+		OKTADDSVP.TextPostsEdit();
+		
+		OKTADDSVP.UpdateDescription_Textbox(prop.getProperty("UpdateDescriptionVideoPost"));
+		
+		OKTADDSVP.Updatebutton();
+		
+		Thread.sleep(5000);
+		
+		String Validation_UpdatedSuccessfully=OKTADDSVP.Validation_UpdatedSuccessfully();
+		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully", "Updated successfully");
+		Thread.sleep(5000);
+		sa.assertAll();
+
 
 	}
 

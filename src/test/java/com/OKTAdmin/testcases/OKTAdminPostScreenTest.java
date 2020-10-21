@@ -2,14 +2,18 @@ package com.OKTAdmin.testcases;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.OKTAdmin.base.TestBase;
 import com.OKTAdmin.pages.OKTAdminLoginPage;
 import com.OKTAdmin.pages.OKTAdminPostScreen;
+import com.OKTAdmin.utils.CustomListener;
 import com.OKTAdmin.utils.TestUtil;
 
+
+@Listeners(CustomListener.class)
 public class OKTAdminPostScreenTest extends TestBase {
 	
 	public  OKTAdminPostScreen OKTADPS;
@@ -42,7 +46,7 @@ public class OKTAdminPostScreenTest extends TestBase {
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
 		TU.GmailWindow();
-		Thread.sleep(20000);
+		Thread.sleep(5000);
 		
 		boolean Post_Link=OKTADPS.Post_Link(); 
 		sa.assertEquals(Post_Link, true);
@@ -60,7 +64,7 @@ public class OKTAdminPostScreenTest extends TestBase {
 		Thread.sleep(5000);
 		TU.GmailWindow();
 		
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
 		Thread.sleep(5000);
 		 
@@ -78,9 +82,9 @@ public class OKTAdminPostScreenTest extends TestBase {
 		Thread.sleep(5000);
 		TU.GmailWindow();
 		
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		String Post_Label=OKTADPS.Posts_Label();
 		sa.assertEquals(Post_Label, "Posts", "Posts label is missing"); 
 		sa.assertAll(); 
@@ -101,7 +105,7 @@ public class OKTAdminPostScreenTest extends TestBase {
 		Thread.sleep(5000);
 		TU.GmailWindow();
 		
-		Thread.sleep(20000); 
+		Thread.sleep(5000); 
 		OKTADPS.PostScreen_Link();
 		boolean Create_button=OKTADPS.Create_button();
 		sa.assertEquals(Create_button, true); 
@@ -109,6 +113,8 @@ public class OKTAdminPostScreenTest extends TestBase {
 		Thread.sleep(5000);
 		
 		System.out.println("OKTAdminPostScreenTest - Test cases has been executed");
+		
+		TU.Scrolldown();
 
 	}
 	
