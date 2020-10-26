@@ -97,8 +97,28 @@ public class OKTAdminPostDetailScreenForPoll_Post extends TestBase {
     @FindBy(xpath = "//div[text()='Updated successfully']")
     WebElement Validation_UpdatedSuccessfully;
     
-    @FindBy(xpath = "//div[@class='col']//button[@type='button']")
+    @FindBy(xpath = "//div[@class='col']//button[contains(text(),'Update')]")
     WebElement Update_button;
+    
+
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//div[contains(text(),'Poll Post')]")
+    WebElement Poll_Post_Name_OR_Description_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Active')]")
+    WebElement Poll_Post_Active_Status_On_Post_List;
+   
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),' Community name:')]")
+    WebElement Poll_Post_Community_Name_Label_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Ok Tested')]")
+    WebElement Poll_Post_Community_Name_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'  User:')]")
+    WebElement Poll_Post_User_Label_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Avi Gupta')]")
+    WebElement Poll_Post_User_Name_On_Post_List;
+    
    
     
     
@@ -280,7 +300,7 @@ public class OKTAdminPostDetailScreenForPoll_Post extends TestBase {
 
 	public void Updatebutton() throws InterruptedException
 	  {
-		 Thread.sleep(5000);
+		 Thread.sleep(2000);
 		 Update_button.click();
 	  }
 	
@@ -289,6 +309,47 @@ public class OKTAdminPostDetailScreenForPoll_Post extends TestBase {
 		 Thread.sleep(5000);
 		 return Validation_UpdatedSuccessfully.getText();
 	  }
+	
+	
+
+	public String Poll_Post_Name_OR_Description_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Poll_Post_Name_OR_Description_On_Post_List.getText();
+	  }
+	
+	public String Poll_Post_Active_Status_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Poll_Post_Active_Status_On_Post_List.getText();
+	  }
+	
+
+	public String Poll_Post_Community_Name_Label_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Poll_Post_Community_Name_Label_On_Post_List.getText();
+	  }
+	
+	public String Poll_Post_Community_Name_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Poll_Post_Community_Name_On_Post_List.getText();
+	  }
+	
+
+	public String Poll_Post_User_Label_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Poll_Post_User_Label_On_Post_List.getText();
+	  }
+	
+	public String Poll_Post_User_Name_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Poll_Post_User_Name_On_Post_List.getText();
+	  }
+
 	
 		               
 	}

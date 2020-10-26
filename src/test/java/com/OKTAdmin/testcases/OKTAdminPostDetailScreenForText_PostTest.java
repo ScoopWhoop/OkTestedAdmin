@@ -139,7 +139,24 @@ public class OKTAdminPostDetailScreenForText_PostTest extends TestBase {
 		Thread.sleep(5000);
 		sa.assertAll();
 		
-		System.out.println("OKTAdminPostDetailScreenForText_PostTest - Test cases has been executed");
+		String Verify_Audio_Post_Name_OR_Description_On_Post_List=OKTADPDSTP.Text_Post_Name_OR_Description_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Name_OR_Description_On_Post_List, "Text Post");
+		
+		String Verify_Audio_Post_Active_Status_On_Post_List=OKTADPDSTP.Text_Post_Active_Status_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Active_Status_On_Post_List, "Active");
+		
+		String Verify_Audio_Post_Community_Name_Label_On_Post_List=OKTADPDSTP.Text_Post_Community_Name_Label_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Community_Name_Label_On_Post_List, "Community name:");
+		
+		String Verify_Audio_Post_Community_Name_On_Post_List=OKTADPDSTP.Text_Post_Community_Name_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Community_Name_On_Post_List, "Ok Tested");
+
+		String Verify_Audio_Post_User_Label_On_Post_List=OKTADPDSTP.Text_Post_User_Label_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_User_Label_On_Post_List, "User:");
+		
+		String Verify_Audio_Post_User_Name_On_Post_List=OKTADPDSTP.Text_Post_User_Name_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_User_Name_On_Post_List, "Avi Gupta");
+		
 		
 		Thread.sleep(5000);
 		
@@ -155,6 +172,8 @@ public class OKTAdminPostDetailScreenForText_PostTest extends TestBase {
 		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully", "Updated successfully");
 		Thread.sleep(5000);
 		sa.assertAll();
+
+		System.out.println("OKTAdminPostDetailScreenForText_PostTest - Test cases has been executed");
 
 	}
 

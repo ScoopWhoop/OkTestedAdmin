@@ -42,7 +42,7 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 	    sa=new SoftAssert();
 	}
 	
-	@Test(priority=0)
+	@Test(priority=0,enabled = false)
 	public void Verify_Labels() throws InterruptedException
 	{
 		
@@ -83,7 +83,7 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 				 
 	}
 	
-	@Test(priority=1)// TEST CASE-1
+	@Test(priority=1,enabled = false)// TEST CASE-1
 	public void Verify_Multiple_Validation_For_Poll_Post() throws InterruptedException
 	{
 		
@@ -123,7 +123,7 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 	}
 
 	
-	@Test(priority=2)
+	@Test(priority=2,enabled = false)
 	public void Verify_Validation_Poll_Post() throws InterruptedException
 	{
 		
@@ -194,12 +194,25 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 		
 		String Validation_CreatedSuccessfully=OKTADPDSPP.Validation_CreatedSuccessfully();
 		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully", "Created successfully validation is missing");
-		Thread.sleep(5000);
-		sa.assertAll();
+		Thread.sleep(5000);		
+
+		String Verify_Poll_Post_Name_OR_Description_On_Post_List=OKTADPDSPP.Poll_Post_Name_OR_Description_On_Post_List();
+		sa.assertEquals(Verify_Poll_Post_Name_OR_Description_On_Post_List, "Poll Post");
 		
-		System.out.println("OKTAdminPostDetailScreenForPoll_PostTest - Test cases has been executed");
+		String Verify_Poll_Post_Active_Status_On_Post_List=OKTADPDSPP.Poll_Post_Active_Status_On_Post_List();
+		sa.assertEquals(Verify_Poll_Post_Active_Status_On_Post_List, "Active");
 		
-		Thread.sleep(5000);
+		String Verify_Poll_Post_Community_Name_Label_On_Post_List=OKTADPDSPP.Poll_Post_Community_Name_Label_On_Post_List();
+		sa.assertEquals(Verify_Poll_Post_Community_Name_Label_On_Post_List, "Community name:");
+		
+		String Verify_Poll_Post_Community_Name_On_Post_List=OKTADPDSPP.Poll_Post_Community_Name_On_Post_List();
+		sa.assertEquals(Verify_Poll_Post_Community_Name_On_Post_List, "Ok Tested");
+
+		String Verify_Poll_Post_User_Label_On_Post_List=OKTADPDSPP.Poll_Post_User_Label_On_Post_List();
+		sa.assertEquals(Verify_Poll_Post_User_Label_On_Post_List, "User:");
+		
+		String Verify_Poll_Post_User_Name_On_Post_List=OKTADPDSPP.Poll_Post_User_Name_On_Post_List();
+		sa.assertEquals(Verify_Poll_Post_User_Name_On_Post_List, "Avi Gupta");
 		
 		OKTADPDSPP.TextPostsEdit();
 		
@@ -210,10 +223,10 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 		Thread.sleep(5000);
 		
 		String Validation_UpdatedSuccessfully=OKTADPDSPP.Validation_UpdatedSuccessfully();
-		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully", "Updated successfully");
-		Thread.sleep(5000);
+		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully");
 		sa.assertAll();
 
+		System.out.println("OKTAdminPostDetailScreenForPoll_PostTest - Test cases has been executed");
 
 	}
 

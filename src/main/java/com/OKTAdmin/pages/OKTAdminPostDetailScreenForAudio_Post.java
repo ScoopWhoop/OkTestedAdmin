@@ -93,12 +93,29 @@ public class OKTAdminPostDetailScreenForAudio_Post extends TestBase {
     @FindBy(xpath = "//textarea[@name='description']")
   	WebElement UpdatedDescription_Textbox;
     
+    @FindBy(xpath = "//button[contains(text(),' Update ')]")
+  	WebElement Update_button;
+    
     @FindBy(xpath = "//div[text()='Updated successfully']")
     WebElement Validation_UpdatedSuccessfully;
     
-    @FindBy(xpath = "//div[@class='col']//button[@type='button']")
-    WebElement Update_button;
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//div[contains(text(),'Audio Post')]")
+    WebElement Audio_Post_Name_OR_Description_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Active')]")
+    WebElement Audio_Post_Active_Status_On_Post_List;
    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),' Community name:')]")
+    WebElement Audio_Post_Community_Name_Label_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Ok Tested')]")
+    WebElement Audio_Post_Community_Name_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'  User:')]")
+    WebElement Audio_Post_User_Label_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Avi Gupta')]")
+    WebElement Audio_Post_User_Name_On_Post_List;
     
     
 	public OKTAdminPostDetailScreenForAudio_Post()
@@ -289,6 +306,43 @@ public class OKTAdminPostDetailScreenForAudio_Post extends TestBase {
 	  }
 	
 	
+	public String Audio_Post_Name_OR_Description_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Audio_Post_Name_OR_Description_On_Post_List.getText();
+	  }
+	
+	public String Audio_Post_Active_Status_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Audio_Post_Active_Status_On_Post_List.getText();
+	  }
+	
+
+	public String Audio_Post_Community_Name_Label_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Audio_Post_Community_Name_Label_On_Post_List.getText();
+	  }
+	
+	public String Audio_Post_Community_Name_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Audio_Post_Community_Name_On_Post_List.getText();
+	  }
+	
+
+	public String Audio_Post_User_Label_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Audio_Post_User_Label_On_Post_List.getText();
+	  }
+	
+	public String Audio_Post_User_Name_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Audio_Post_User_Name_On_Post_List.getText();
+	  }
 }
 		               
 	

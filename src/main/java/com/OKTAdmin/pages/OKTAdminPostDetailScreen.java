@@ -148,16 +148,124 @@ public class OKTAdminPostDetailScreen extends TestBase {
 		{
 			String Total_PostType_Dropdown_Value_Name=ele.getText();
 			System.out.println(Total_PostType_Dropdown_Value_Name);
+		
+			
 		}
+		
+	}
+		
+		public void Total_PostStatus_Dropdown_Value()
+		
+		{
+			          
+			Select select =new Select(PostStatus_Dropdown);
+			
+			List<WebElement> Total_PostStatus_Dropdown_Value= select.getOptions();
+			int Total_PostStatus_Dropdown_Value_Size= Total_PostStatus_Dropdown_Value.size();
+			System.out.println(Total_PostStatus_Dropdown_Value_Size);
+			
+			for(WebElement ele: Total_PostStatus_Dropdown_Value)
+			{
+				String Total_PostStatus_Dropdown_Value_Name=ele.getText();
+				System.out.println(Total_PostStatus_Dropdown_Value_Name);
+			
+				
+			}
+
+		               
+	}
+		
+	public void Total_User_Dropdown_Value()
+		
+		{
+			          
+			Select select =new Select(User_Dropdown);
+			
+			List<WebElement> Total_User_Dropdown_Value= select.getOptions();
+			int Total_User_Dropdown_Value_Size= Total_User_Dropdown_Value.size();
+			System.out.println(Total_User_Dropdown_Value_Size);
+			
+			for(WebElement ele: Total_User_Dropdown_Value)
+			{
+				String Total_User_Dropdown_Value_Name=ele.getText();
+				System.out.println(Total_User_Dropdown_Value_Name);
+			
+				
+			}
+
 		               
 	}
 	
-	public void Createbutton_BackgroundColor()
+	
+	public void Total_Community_Dropdown_Value()
+	
+	{
+		          
+		Select select =new Select(User_Dropdown);
+		
+		List<WebElement> Total_Community_Dropdown_Value= select.getOptions();
+		int Total_Community_Dropdown_Value_Size= Total_Community_Dropdown_Value.size();
+		System.out.println(Total_Community_Dropdown_Value_Size);
+		
+		for(WebElement ele: Total_Community_Dropdown_Value)
+		{
+			String Total_Community_Dropdown_Value_Name=ele.getText();
+			System.out.println(Total_Community_Dropdown_Value_Name);
+		
+			
+		}
+
+	               
+}
+	
+	
+	public String DefaultPostTypedropdownValue()
+	
+	{
+	
+		Select select=new Select(PostType_Dropdown);
+		
+		return select.getFirstSelectedOption().getText();
+		
+	}
+	
+   public String DefaultPostStatusdropdownValue()
+	
+	{
+	
+		Select select=new Select(PostStatus_Dropdown);
+		
+		return select.getFirstSelectedOption().getText();
+		
+	}
+   
+   public String DefaultUserdropdownValue()
+	
+	{
+	
+		Select select=new Select(User_Dropdown);
+		
+		return select.getFirstSelectedOption().getText();
+		
+	}
+   
+
+   public String DefaultCommunitydropdownValue()
+	
+	{
+	
+		Select select=new Select(Community_Dropdown);
+		
+		return select.getFirstSelectedOption().getText();
+		
+	}
+	
+	
+	public String Createbutton_BackgroundColor()
 	{
 		String Createbutton_backgroundColor=PostDetail_Create_button.getCssValue("background-color");
-		System.out.println(Createbutton_backgroundColor);
-		String Createbutton_backgroundColor_HexFormat=Color.fromString(Createbutton_backgroundColor).asHex();
-		System.out.println(Createbutton_backgroundColor_HexFormat);
+		return Createbutton_backgroundColor=Color.fromString(Createbutton_backgroundColor).asHex();
+		
 	}
 	
 }

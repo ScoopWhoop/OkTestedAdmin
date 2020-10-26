@@ -196,9 +196,26 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 		String Validation_CreatedSuccessfully=OKTADDSVP.Validation_CreatedSuccessfully();
 		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully", "Created successfully");
 		Thread.sleep(5000);
+		
+		String Verify_Video_Post_Name_OR_Description_On_Post_List=OKTADDSVP.Video_Post_Name_OR_Description_On_Post_List();
+		sa.assertEquals(Verify_Video_Post_Name_OR_Description_On_Post_List, "Video Post");
+		
+		String Verify_Video_Post_Active_Status_On_Post_List=OKTADDSVP.Video_Post_Active_Status_On_Post_List();
+		sa.assertEquals(Verify_Video_Post_Active_Status_On_Post_List, "Active");
+		
+		String Verify_Video_Post_Community_Name_Label_On_Post_List=OKTADDSVP.Video_Post_Community_Name_Label_On_Post_List();
+		sa.assertEquals(Verify_Video_Post_Community_Name_Label_On_Post_List, "Community name:");
+		
+		String Verify_Video_Post_Community_Name_On_Post_List=OKTADDSVP.Video_Post_Community_Name_On_Post_List();
+		sa.assertEquals(Verify_Video_Post_Community_Name_On_Post_List, "Ok Tested");
+
+		String Verify_Video_Post_User_Label_On_Post_List=OKTADDSVP.Video_Post_User_Label_On_Post_List();
+		sa.assertEquals(Verify_Video_Post_User_Label_On_Post_List, "User:");
+		
+		String Verify_Video_Post_User_Name_On_Post_List=OKTADDSVP.Video_Post_User_Name_On_Post_List();
+		sa.assertEquals(Verify_Video_Post_User_Name_On_Post_List, "Avi Gupta");
 		sa.assertAll();
 		
-		System.out.println("OKTAdminPostDetailScreenForVideo_PostTest - Test cases has been executed");
 		
         Thread.sleep(5000);
 		
@@ -213,7 +230,10 @@ public class OKTAdminPostDetailScreenForVideo_PostTest extends TestBase {
 		String Validation_UpdatedSuccessfully=OKTADDSVP.Validation_UpdatedSuccessfully();
 		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully", "Updated successfully");
 		Thread.sleep(5000);
+		
 		sa.assertAll();
+
+		System.out.println("OKTAdminPostDetailScreenForVideo_PostTest - Test cases has been executed");
 
 
 	}

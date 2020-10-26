@@ -82,7 +82,7 @@ public class OKTAdminPostDetailScreenForImage_PostTest extends TestBase {
 	}
 	
 	@Test(priority=1)
-	public void Verify_Multiple_Validation_For_Poll_Post() throws InterruptedException
+	public void Verify_Multiple_Validation_For_Image_Post() throws InterruptedException
 	{
 		
 		Thread.sleep(5000);
@@ -116,7 +116,7 @@ public class OKTAdminPostDetailScreenForImage_PostTest extends TestBase {
 	
 	
 	@Test(priority=2)
-	public void Verify_Validation_Poll_Post() throws InterruptedException
+	public void Verify_Validation_Image_Post() throws InterruptedException
 	{
 		
 		Thread.sleep(50000);
@@ -181,12 +181,26 @@ public class OKTAdminPostDetailScreenForImage_PostTest extends TestBase {
 		String Validation_CreatedSuccessfully=OKTADDPSIP.Validation_CreatedSuccessfully();
 		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully", "Created successfully validation is missing");
 		Thread.sleep(5000);
-		sa.assertAll();
+
+		String Verify_Audio_Post_Name_OR_Description_On_Post_List=OKTADDPSIP.Image_Post_Name_OR_Description_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Name_OR_Description_On_Post_List, "Image Post");
 		
-		System.out.println("OKTAdminPostDetailScreenForImage_PostTest - Test cases has been executed");
+		String Verify_Audio_Post_Active_Status_On_Post_List=OKTADDPSIP.Image_Post_Active_Status_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Active_Status_On_Post_List, "Active");
 		
+		String Verify_Audio_Post_Community_Name_Label_On_Post_List=OKTADDPSIP.Image_Post_Community_Name_Label_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Community_Name_Label_On_Post_List, "Community name:");
+		
+		String Verify_Audio_Post_Community_Name_On_Post_List=OKTADDPSIP.Image_Post_Community_Name_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Community_Name_On_Post_List, "Ok Tested");
+
+		String Verify_Audio_Post_User_Label_On_Post_List=OKTADDPSIP.Image_Post_User_Label_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_User_Label_On_Post_List, "User:");
+		
+		String Verify_Audio_Post_User_Name_On_Post_List=OKTADDPSIP.Image_Post_User_Name_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_User_Name_On_Post_List, "Avi Gupta");
 		Thread.sleep(5000);
-		
+						
 		OKTADDPSIP.TextPostsEdit();
 		
 		OKTADDPSIP.UpdateDescription_Textbox(prop.getProperty("UpdateDescriptionImagePost"));
@@ -199,6 +213,10 @@ public class OKTAdminPostDetailScreenForImage_PostTest extends TestBase {
 		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully", "Updated successfully");
 		Thread.sleep(5000);
 		sa.assertAll();
+		
+		
+		System.out.println("OKTAdminPostDetailScreenForImage_PostTest - Test cases has been executed");
+
 
 	}
 

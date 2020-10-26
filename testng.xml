@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
 <suite name="OKTestedAdmin_Regression_Automation_Test_Cases">
  
+ <listeners>
+ 
+ <listener class-name = "com.OKTAdmin.utils.CustomListener">
+ 
+ </listener>
+ 
+  <listener class-name="com.OKTAdmin.utils.AnnaotationTransformer">
+  
+  </listener>
+  
+   <listener class-name="com.OKTAdmin.utils.ExtentReporterNG">
+  
+  </listener>
+ 
+ </listeners>
  
   <test name="OKTestedAdmin_Regression_Automation_Test_Cases">
     <classes>
     
      <class name="com.OKTAdmin.testcases.OKTAdminLoginPageTest"/>
-      
-       
+     <class name="com.OKTAdmin.testcases.OKTAdminPostScreenTest"/>   
+     <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenTest"/>
+     <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForText_PostTest"/>   
+     <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForImage_PostTest"/>   
+     <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForLink_PostTest"/>   
+     <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForPoll_PostTest"/>   
+     <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForAudio_PostTest"/>   
+     <class name="com.OKTAdmin.testcases.OKTAdminPostDetailScreenForVideo_PostTest"/>   
+     
+     
       
  
     </classes>

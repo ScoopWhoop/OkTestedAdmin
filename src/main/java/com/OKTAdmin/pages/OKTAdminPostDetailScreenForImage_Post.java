@@ -88,6 +88,23 @@ public class OKTAdminPostDetailScreenForImage_Post extends TestBase {
     @FindBy(xpath = "//div[@class='col']//button[@type='button']")
     WebElement Update_button;
    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//div[contains(text(),'Image Post')]")
+    WebElement Image_Post_Name_OR_Description_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Active')]")
+    WebElement Image_Post_Active_Status_On_Post_List;
+   
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),' Community name:')]")
+    WebElement Image_Post_Community_Name_Label_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Ok Tested')]")
+    WebElement Image_Post_Community_Name_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'  User:')]")
+    WebElement Image_Post_User_Label_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Avi Gupta')]")
+    WebElement Image_Post_User_Name_On_Post_List;
     
     
     
@@ -256,7 +273,45 @@ public class OKTAdminPostDetailScreenForImage_Post extends TestBase {
 		 return Validation_UpdatedSuccessfully.getText();
 	  }
 	
+
 	
+	public String Image_Post_Name_OR_Description_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Image_Post_Name_OR_Description_On_Post_List.getText();
+	  }
+	
+	public String Image_Post_Active_Status_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Image_Post_Active_Status_On_Post_List.getText();
+	  }
+	
+
+	public String Image_Post_Community_Name_Label_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Image_Post_Community_Name_Label_On_Post_List.getText();
+	  }
+	
+	public String Image_Post_Community_Name_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Image_Post_Community_Name_On_Post_List.getText();
+	  }
+	
+
+	public String Image_Post_User_Label_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Image_Post_User_Label_On_Post_List.getText();
+	  }
+	
+	public String Image_Post_User_Name_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Image_Post_User_Name_On_Post_List.getText();
+	  }
 
 	
 	

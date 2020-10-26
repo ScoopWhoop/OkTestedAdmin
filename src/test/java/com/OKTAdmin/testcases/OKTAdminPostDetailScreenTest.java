@@ -92,29 +92,66 @@ public class OKTAdminPostDetailScreenTest extends TestBase {
 		sa.assertAll();
 
 	}
-
-	
 	
 	@Test(priority=2)
-	public void verifyTotal_PostType_Dropdown_Value() throws InterruptedException
+	public void Verify_DefaultdropdownValue() throws InterruptedException
 	
 	{
+	
 		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
 		TU.GmailWindow();
 		Thread.sleep(5000);
 		OKTADPS.PostScreen_Link();
+		Thread.sleep(5000);
+		OKTADPDS.Create_button();
+		Thread.sleep(5000);
+		String DefaultPostTypedropdownValue=OKTADPDS.DefaultPostTypedropdownValue();
+		System.out.println("DefaultPostTypedropdownValue is : "  +  DefaultPostTypedropdownValue);
+		sa.assertEquals(DefaultPostTypedropdownValue, "Text");
+		
+		String DefaultPostStatusdropdownValue=OKTADPDS.DefaultPostStatusdropdownValue();
+		System.out.println("DefaultPostStatusdropdownValue is : "  +  DefaultPostStatusdropdownValue);
+		sa.assertEquals(DefaultPostStatusdropdownValue, "Active");
+		 
+		String DefaultUserdropdownValue=OKTADPDS.DefaultUserdropdownValue();
+		System.out.println("DefaultUserdropdownValue is : "  +  DefaultUserdropdownValue);
+		sa.assertEquals(DefaultUserdropdownValue, "Please choose");
+		
+		String DefaultCommunitydropdownValue=OKTADPDS.DefaultCommunitydropdownValue();
+		System.out.println("DefaultCommunitydropdownValue is : "  +  DefaultCommunitydropdownValue);
+		sa.assertEquals(DefaultCommunitydropdownValue, "Please choose");
+		
+	}
+
+	
+	
+	@Test(priority=3)
+	public void verify_Total_All_Dropdown_Value() throws InterruptedException
+	
+	{
+		Thread.sleep(5000);
+		OKTADLP.LoginWithGoogleButton();
+		Thread.sleep(5000);
+		TU.GmailWindow();  
+		Thread.sleep(5000);
+		OKTADPS.PostScreen_Link();
 		OKTADPDS.Create_button();
 		Thread.sleep(5000);
 		
-		Thread.sleep(5000);
 		OKTADPDS.Total_PostType_Dropdown_Value();
 		Thread.sleep(5000);
-		 
-		System.out.println("OKTAdminPostDetailScreenTest - Test cases has been executed");
+		OKTADPDS.Total_PostStatus_Dropdown_Value();
+		OKTADPDS.Total_User_Dropdown_Value();
+		OKTADPDS.Total_Community_Dropdown_Value();
 		
-		OKTADPDS.Createbutton_BackgroundColor();
+		
+		 String Verify_Createbutton_BackgroundColor_In_Hex_Format=OKTADPDS.Createbutton_BackgroundColor();
+		 sa.assertEquals(Verify_Createbutton_BackgroundColor_In_Hex_Format, "#17a2b8");
+		 sa.assertAll();
+		
+		System.out.println("OKTAdminPostDetailScreenTest - Test cases has been executed");
 
 
 	}

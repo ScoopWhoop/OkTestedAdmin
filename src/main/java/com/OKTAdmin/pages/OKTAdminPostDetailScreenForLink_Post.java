@@ -85,6 +85,25 @@ public class OKTAdminPostDetailScreenForLink_Post extends TestBase {
     WebElement Update_button;
    
     
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//div[contains(text(),'Link Post')]")
+    WebElement Link_Post_Name_OR_Description_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Active')]")
+    WebElement Link_Post_Active_Status_On_Post_List;
+   
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),' Community name:')]")
+    WebElement Link_Post_Community_Name_Label_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Ok Tested')]")
+    WebElement Link_Post_Community_Name_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'  User:')]")
+    WebElement Link_Post_User_Label_On_Post_List;
+    
+    @FindBy(xpath = "//div[@class='mt-2 list-group']//div[@class='list-group-item'][1]//span[contains(text(),'Avi Gupta')]")
+    WebElement Link_Post_User_Name_On_Post_List;
+    
+    
     
     
     
@@ -238,6 +257,49 @@ public class OKTAdminPostDetailScreenForLink_Post extends TestBase {
 		 Thread.sleep(5000);
 		 return Validation_UpdatedSuccessfully.getText();
 	  }
+	
+
+
+	
+	public String Link_Post_Name_OR_Description_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Link_Post_Name_OR_Description_On_Post_List.getText();
+	  }
+	
+	public String Link_Post_Active_Status_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Link_Post_Active_Status_On_Post_List.getText();
+	  }
+	
+
+	public String Link_Post_Community_Name_Label_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Link_Post_Community_Name_Label_On_Post_List.getText();
+	  }
+	
+	public String Link_Post_Community_Name_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Link_Post_Community_Name_On_Post_List.getText();
+	  }
+	
+
+	public String Link_Post_User_Label_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Link_Post_User_Label_On_Post_List.getText();
+	  }
+	
+	public String Link_Post_User_Name_On_Post_List() throws InterruptedException
+	  {
+		 Thread.sleep(5000);
+		 return Link_Post_User_Name_On_Post_List.getText();
+	  }
+
+	
 	
 	}
 	

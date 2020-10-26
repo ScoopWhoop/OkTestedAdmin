@@ -1,5 +1,7 @@
 package com.OKTAdmin.testcases;
 
+import org.apache.log4j.Logger;
+import org.eclipse.jetty.util.log.Log;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -17,7 +19,7 @@ public class OKTAdminLoginPageTest extends TestBase {
 	public  OKTAdminLoginPage OKTADLP;
 	public  TestUtil TU;
 	SoftAssert sa;
-	
+	 Logger  Log=Logger.getLogger(OKTAdminLoginPageTest.class);
 	
 	public OKTAdminLoginPageTest() {
 		
@@ -28,10 +30,12 @@ public class OKTAdminLoginPageTest extends TestBase {
 	@BeforeMethod
 	public void Setup()
 	{
+		
 		intilization();
 		OKTADLP=new OKTAdminLoginPage();
 		TU=new TestUtil();
 	    sa=new SoftAssert();
+	  
 	}
 	
 	@Test(priority=0)
@@ -42,6 +46,8 @@ public class OKTAdminLoginPageTest extends TestBase {
 		sa.assertEquals(OkTestedAdminLoginPageTitle, "OKT Admin");
 		sa.assertAll();
 		Thread.sleep(5000);
+		
+		
 	}
 
 

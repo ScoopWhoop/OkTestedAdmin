@@ -155,7 +155,7 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 	
 	
 	@Test(priority=3)
-	public void Create_Audio_Post() throws InterruptedException, AWTException
+	public void CreateAndUpdate_Audio_Post() throws InterruptedException, AWTException
 	{
 		
 		Thread.sleep(5000);
@@ -193,13 +193,24 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 		
 		String Validation_CreatedSuccessfully=OKTADDSAP.Validation_CreatedSuccessfully();
 		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully", "Created successfully validation is missing");
-		Thread.sleep(5000);
-		sa.assertAll();
 		
-		System.out.println("OKTAdminPostDetailScreenForAudio_PostTest - Test cases has been executed");
-	
+		String Verify_Audio_Post_Name_OR_Description_On_Post_List=OKTADDSAP.Audio_Post_Name_OR_Description_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Name_OR_Description_On_Post_List, "Audio Post");
+		
+		String Verify_Audio_Post_Active_Status_On_Post_List=OKTADDSAP.Audio_Post_Active_Status_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Active_Status_On_Post_List, "Active");
+		
+		String Verify_Audio_Post_Community_Name_Label_On_Post_List=OKTADDSAP.Audio_Post_Community_Name_Label_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Community_Name_Label_On_Post_List, "Community name:");
+		
+		String Verify_Audio_Post_Community_Name_On_Post_List=OKTADDSAP.Audio_Post_Community_Name_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_Community_Name_On_Post_List, "Ok Tested");
 
-	
+		String Verify_Audio_Post_User_Label_On_Post_List=OKTADDSAP.Audio_Post_User_Label_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_User_Label_On_Post_List, "User:");
+		
+		String Verify_Audio_Post_User_Name_On_Post_List=OKTADDSAP.Audio_Post_User_Name_On_Post_List();
+		sa.assertEquals(Verify_Audio_Post_User_Name_On_Post_List, "Avi Gupta");
 		Thread.sleep(5000);
 		
 		OKTADDSAP.TextPostsEdit();
@@ -213,7 +224,11 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 		String Validation_UpdatedSuccessfully=OKTADDSAP.Validation_UpdatedSuccessfully();
 		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully", "Updated successfully");
 		Thread.sleep(5000);
+		
 		sa.assertAll();
+		
+		System.out.println("OKTAdminPostDetailScreenForAudio_PostTest - Test cases has been executed");
+
 	
 		}
 	

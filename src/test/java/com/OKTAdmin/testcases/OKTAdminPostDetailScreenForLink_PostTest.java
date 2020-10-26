@@ -135,7 +135,7 @@ public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 	}
 	
 	@Test(priority=3)
-	public void Create_Link_Post() throws InterruptedException
+	public void CreateAndUpdate_Link_Post() throws InterruptedException
 	{
 		
 		Thread.sleep(5000);
@@ -163,14 +163,35 @@ public class OKTAdminPostDetailScreenForLink_PostTest extends TestBase {
 		sa.assertAll();
 		
 		System.out.println("OKTAdminPostDetailScreenForLink_PostTest - Test cases has been executed");
-		
+		   
 		Thread.sleep(5000);
+		
+		String Verify_Link_Post_Name_OR_Description_On_Post_List=OKTADPDSLP.Link_Post_Name_OR_Description_On_Post_List();
+		sa.assertEquals(Verify_Link_Post_Name_OR_Description_On_Post_List, "Link Post");
+		
+		String Verify_Link_Post_Active_Status_On_Post_List=OKTADPDSLP.Link_Post_Active_Status_On_Post_List();
+		sa.assertEquals(Verify_Link_Post_Active_Status_On_Post_List, "Active");
+		
+		String Verify_Link_Post_Community_Name_Label_On_Post_List=OKTADPDSLP.Link_Post_Community_Name_Label_On_Post_List();
+		sa.assertEquals(Verify_Link_Post_Community_Name_Label_On_Post_List, "Community name:");
+		
+		String Verify_Link_Post_Community_Name_On_Post_List=OKTADPDSLP.Link_Post_Community_Name_On_Post_List();
+		sa.assertEquals(Verify_Link_Post_Community_Name_On_Post_List, "Ok Tested");
+
+		String Verify_Link_Post_User_Label_On_Post_List=OKTADPDSLP.Link_Post_User_Label_On_Post_List();
+		sa.assertEquals(Verify_Link_Post_User_Label_On_Post_List, "User:");
+		
+		String Verify_Link_Post_User_Name_On_Post_List=OKTADPDSLP.Link_Post_User_Name_On_Post_List();
+		sa.assertEquals(Verify_Link_Post_User_Name_On_Post_List, "Avi Gupta");
+		Thread.sleep(5000);
+
 		
 		OKTADPDSLP.TextPostsEdit();
 		
 		OKTADPDSLP.UpdateDescription_Textbox(prop.getProperty("UpdateDescriptionLinkPost"));
 		
 		OKTADPDSLP.Updatebutton();
+		
 		
 		Thread.sleep(5000);
 		

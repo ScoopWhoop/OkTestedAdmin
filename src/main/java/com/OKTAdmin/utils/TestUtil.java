@@ -204,7 +204,7 @@ public class TestUtil extends TestBase{
 		{
 
 			 // Specify the file location with extension
-			 StringSelection sel = new StringSelection("C:\\Users\\Shanu\\Desktop\\Video.avi");
+			 StringSelection sel = new StringSelection("C:\\Users\\Shanu\\Desktop\\640.mp4");
 			 
 			   // Copy to clipboard
 			 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel,null);
