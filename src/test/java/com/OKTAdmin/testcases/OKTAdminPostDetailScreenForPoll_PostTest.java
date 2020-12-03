@@ -17,35 +17,31 @@ import com.OKTAdmin.utils.TestUtil;
 
 @Listeners(CustomListener.class)
 public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
-	
+
 	public OKTAdminPostDetailScreenForPoll_Post OKTADPDSPP;
 	public OKTAdminLoginPage OKTADLP;
 	public OKTAdminPostScreen OKTADPS;
-	public  TestUtil TU;
+	public TestUtil TU;
 	SoftAssert sa;
 
 	public OKTAdminPostDetailScreenForPoll_PostTest() {
-		
-		
+
 		super();
 	}
 
-
 	@BeforeMethod
-	public void Setup()
-	{
+	public void Setup() {
 		intilization();
-		OKTADPDSPP=new OKTAdminPostDetailScreenForPoll_Post();
-		OKTADLP=new OKTAdminLoginPage();
-		OKTADPS=new OKTAdminPostScreen();
-		TU=new TestUtil();
-	    sa=new SoftAssert();
+		OKTADPDSPP = new OKTAdminPostDetailScreenForPoll_Post();
+		OKTADLP = new OKTAdminLoginPage();
+		OKTADPS = new OKTAdminPostScreen();
+		TU = new TestUtil();
+		sa = new SoftAssert();
 	}
-	
-	@Test(priority=0,enabled = false)
-	public void Verify_Labels() throws InterruptedException
-	{
-		
+
+	@Test(priority = 0, enabled = false)
+	public void Verify_Labels() throws InterruptedException {
+
 		Thread.sleep(50000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
@@ -58,35 +54,34 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 
 		OKTADPDSPP.Select_PostType(prop.getProperty("PostType_Poll"));
 		Thread.sleep(5000);
-		
-		String Media_Preview_Label=OKTADPDSPP.Media_Preview_Label();
+
+		String Media_Preview_Label = OKTADPDSPP.Media_Preview_Label();
 		sa.assertEquals(Media_Preview_Label, "Media Preview", "Media Preview label is missing");
-		
-		String Attachment_Media_Label=OKTADPDSPP.Media_Label();
+
+		String Attachment_Media_Label = OKTADPDSPP.Media_Label();
 		sa.assertEquals(Attachment_Media_Label, "Media", "Media label is missing");
-		
-		String Dropdown_PostType_Label=OKTADPDSPP.Dropdown_PostType_Label();
+
+		String Dropdown_PostType_Label = OKTADPDSPP.Dropdown_PostType_Label();
 		sa.assertEquals(Dropdown_PostType_Label, "Post Type", "Post Type label is missing");
-		
-		String Dropdown_User_Label=OKTADPDSPP.Dropdown_User_Label();
+
+		String Dropdown_User_Label = OKTADPDSPP.Dropdown_User_Label();
 		sa.assertEquals(Dropdown_User_Label, "User", "User label is missing");
-		
-		String Dropdown_Community_Label=OKTADPDSPP.Dropdown_Community_Label();
+
+		String Dropdown_Community_Label = OKTADPDSPP.Dropdown_Community_Label();
 		sa.assertEquals(Dropdown_Community_Label, "Community", "Community label is missing");
-		
-		String Description_Label=OKTADPDSPP.Description_Label();
+
+		String Description_Label = OKTADPDSPP.Description_Label();
 		sa.assertEquals(Description_Label, "Description", "Description label is missing");
-		
+
 		sa.assertAll();
-		
+
 		Thread.sleep(5000);
-				 
+
 	}
-	
-	@Test(priority=1,enabled = false)// TEST CASE-1
-	public void Verify_Multiple_Validation_For_Poll_Post() throws InterruptedException
-	{
-		
+
+	@Test(priority = 1, enabled = false) // TEST CASE-1
+	public void Verify_Multiple_Validation_For_Poll_Post() throws InterruptedException {
+
 		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
@@ -96,37 +91,37 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 		Thread.sleep(5000);
 		OKTADPDSPP.Create_button();
 		Thread.sleep(5000);
-		
+
 		OKTADPDSPP.Select_PostType(prop.getProperty("PostType_Poll"));
 		Thread.sleep(5000);
 		OKTADPDSPP.PostDetail_Create_button();
 		Thread.sleep(5000);
-		String Validation_PleaseSelectUser=OKTADPDSPP.Validation_PleaseSelectUser();
+		String Validation_PleaseSelectUser = OKTADPDSPP.Validation_PleaseSelectUser();
 		sa.assertEquals(Validation_PleaseSelectUser, "Please select user", "Please select user validation is missing");
 		OKTADPDSPP.Select_User(prop.getProperty("User"));
 		Thread.sleep(5000);
-		
+
 		OKTADPDSPP.PostDetail_Create_button();
 		Thread.sleep(5000);
-		String Validation_PleaseSelectCommunity=OKTADPDSPP.Validation_PleaseSelectCommunity();
-		sa.assertEquals(Validation_PleaseSelectCommunity, "Please select community", "Please select community validation is missing");
+		String Validation_PleaseSelectCommunity = OKTADPDSPP.Validation_PleaseSelectCommunity();
+		sa.assertEquals(Validation_PleaseSelectCommunity, "Please select community",
+				"Please select community validation is missing");
 		OKTADPDSPP.Select_Community(prop.getProperty("Community"));
 		Thread.sleep(5000);
-		
+
 		OKTADPDSPP.PostDetail_Create_button();
 		Thread.sleep(5000);
-		String Validation_DescriptionCannotBeBlank=OKTADPDSPP.Validation_DescriptionCannotBeBlank();
-		sa.assertEquals(Validation_DescriptionCannotBeBlank, "Description cannot be blank", "Description cannot be blank validation is missing");
+		String Validation_DescriptionCannotBeBlank = OKTADPDSPP.Validation_DescriptionCannotBeBlank();
+		sa.assertEquals(Validation_DescriptionCannotBeBlank, "Description cannot be blank",
+				"Description cannot be blank validation is missing");
 		Thread.sleep(5000);
 		sa.assertAll();
-		 
+
 	}
 
-	
-	@Test(priority=2,enabled = false)
-	public void Verify_Validation_Poll_Post() throws InterruptedException
-	{
-		
+	@Test(priority = 2, enabled = false)
+	public void Verify_Validation_Poll_Post() throws InterruptedException {
+
 		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
@@ -136,7 +131,7 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 		Thread.sleep(5000);
 		OKTADPDSPP.Create_button();
 		Thread.sleep(5000);
-		
+
 		OKTADPDSPP.Select_PostType(prop.getProperty("PostType_Poll"));
 		OKTADPDSPP.Select_PostStatus(prop.getProperty("PostStatus"));
 		OKTADPDSPP.Select_User(prop.getProperty("User"));
@@ -144,17 +139,17 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 		OKTADPDSPP.Description_Textbox(prop.getProperty("DescriptionPollPost"));
 		OKTADPDSPP.PostDetail_Create_button();
 		Thread.sleep(5000);
-		String Validation_PleaseAddAtLeastTwoChoices=OKTADPDSPP.Validation_PleaseAddAtLeastTwoChoices();
-		sa.assertEquals(Validation_PleaseAddAtLeastTwoChoices, "Please add at least two choices", "Please add at least two choices validation is missing");
+		String Validation_PleaseAddAtLeastTwoChoices = OKTADPDSPP.Validation_PleaseAddAtLeastTwoChoices();
+		sa.assertEquals(Validation_PleaseAddAtLeastTwoChoices, "Please add at least two choices",
+				"Please add at least two choices validation is missing");
 		Thread.sleep(5000);
 		sa.assertAll();
-				 
+
 	}
-	
-	@Test(priority=3)
-	public void CreateAndUpdate_Poll_Post() throws InterruptedException, AWTException
-	{
-		
+
+	@Test(priority = 3)
+	public void CreateAndUpdate_Poll_Post() throws InterruptedException, AWTException {
+
 		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
@@ -164,7 +159,7 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 		Thread.sleep(5000);
 		OKTADPDSPP.Create_button();
 		Thread.sleep(5000);
-		
+
 		OKTADPDSPP.Select_PostType(prop.getProperty("PostType_Poll"));
 		OKTADPDSPP.Select_PostStatus(prop.getProperty("PostStatus"));
 		OKTADPDSPP.Select_User(prop.getProperty("User"));
@@ -178,51 +173,54 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 		OKTADPDSPP.Choice_button();
 		Thread.sleep(5000);
 		OKTADPDSPP.Choice_Textbox_2(prop.getProperty("PollOption2"));
-		
+
 		Thread.sleep(5000);
-		
+
 		TU.Poll_File_Upload();
-		
+
 		Thread.sleep(5000);
-		
-		boolean Attachment_Media_Preview=OKTADPDSPP.Attachment_Media_Preview();
+
+		boolean Attachment_Media_Preview = OKTADPDSPP.Attachment_Media_Preview();
 		sa.assertEquals(Attachment_Media_Preview, true, "Attachment Media Preview is missing");
 		Thread.sleep(60000);
 		OKTADPDSPP.PostDetail_Create_button();
-	
-		Thread.sleep(5000);
-		
-		String Validation_CreatedSuccessfully=OKTADPDSPP.Validation_CreatedSuccessfully();
-		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully", "Created successfully validation is missing");
-		Thread.sleep(5000);		
 
-		String Verify_Poll_Post_Name_OR_Description_On_Post_List=OKTADPDSPP.Poll_Post_Name_OR_Description_On_Post_List();
+		Thread.sleep(5000);
+
+		String Validation_CreatedSuccessfully = OKTADPDSPP.Validation_CreatedSuccessfully();
+		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully",
+				"Created successfully validation is missing");
+		Thread.sleep(5000);
+
+		String Verify_Poll_Post_Name_OR_Description_On_Post_List = OKTADPDSPP
+				.Poll_Post_Name_OR_Description_On_Post_List();
 		sa.assertEquals(Verify_Poll_Post_Name_OR_Description_On_Post_List, "Poll Post");
-		
-		String Verify_Poll_Post_Active_Status_On_Post_List=OKTADPDSPP.Poll_Post_Active_Status_On_Post_List();
+
+		String Verify_Poll_Post_Active_Status_On_Post_List = OKTADPDSPP.Poll_Post_Active_Status_On_Post_List();
 		sa.assertEquals(Verify_Poll_Post_Active_Status_On_Post_List, "Active");
-		
-		String Verify_Poll_Post_Community_Name_Label_On_Post_List=OKTADPDSPP.Poll_Post_Community_Name_Label_On_Post_List();
+
+		String Verify_Poll_Post_Community_Name_Label_On_Post_List = OKTADPDSPP
+				.Poll_Post_Community_Name_Label_On_Post_List();
 		sa.assertEquals(Verify_Poll_Post_Community_Name_Label_On_Post_List, "Community name:");
-		
-		String Verify_Poll_Post_Community_Name_On_Post_List=OKTADPDSPP.Poll_Post_Community_Name_On_Post_List();
+
+		String Verify_Poll_Post_Community_Name_On_Post_List = OKTADPDSPP.Poll_Post_Community_Name_On_Post_List();
 		sa.assertEquals(Verify_Poll_Post_Community_Name_On_Post_List, "Ok Tested");
 
-		String Verify_Poll_Post_User_Label_On_Post_List=OKTADPDSPP.Poll_Post_User_Label_On_Post_List();
+		String Verify_Poll_Post_User_Label_On_Post_List = OKTADPDSPP.Poll_Post_User_Label_On_Post_List();
 		sa.assertEquals(Verify_Poll_Post_User_Label_On_Post_List, "User:");
-		
-		String Verify_Poll_Post_User_Name_On_Post_List=OKTADPDSPP.Poll_Post_User_Name_On_Post_List();
+
+		String Verify_Poll_Post_User_Name_On_Post_List = OKTADPDSPP.Poll_Post_User_Name_On_Post_List();
 		sa.assertEquals(Verify_Poll_Post_User_Name_On_Post_List, "Avi Gupta");
-		
+
 		OKTADPDSPP.TextPostsEdit();
-		
+
 		OKTADPDSPP.UpdateDescription_Textbox(prop.getProperty("UpdateDescriptionPollPost"));
-		
+
 		OKTADPDSPP.Updatebutton();
-		
+
 		Thread.sleep(5000);
-		
-		String Validation_UpdatedSuccessfully=OKTADPDSPP.Validation_UpdatedSuccessfully();
+
+		String Validation_UpdatedSuccessfully = OKTADPDSPP.Validation_UpdatedSuccessfully();
 		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully");
 		sa.assertAll();
 
@@ -230,10 +228,8 @@ public class OKTAdminPostDetailScreenForPoll_PostTest extends TestBase {
 
 	}
 
-
 	@AfterMethod
-	public void teardown()
-	{
+	public void teardown() {
 		driver.quit();
 	}
 }

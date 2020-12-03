@@ -17,36 +17,31 @@ import com.OKTAdmin.utils.TestUtil;
 
 @Listeners(CustomListener.class)
 public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
-	
+
 	public OKTAdminPostDetailScreenForAudio_Post OKTADDSAP;
 	public OKTAdminLoginPage OKTADLP;
 	public OKTAdminPostScreen OKTADPS;
-	public  TestUtil TU;
+	public TestUtil TU;
 	SoftAssert sa;
 
 	public OKTAdminPostDetailScreenForAudio_PostTest() {
-		
-		
+
 		super();
 	}
 
-	
 	@BeforeMethod
-	public void Setup()
-	{
+	public void Setup() {
 		intilization();
-		OKTADDSAP=new OKTAdminPostDetailScreenForAudio_Post();
-		OKTADLP=new OKTAdminLoginPage();
-		OKTADPS=new OKTAdminPostScreen();
-		TU=new TestUtil();
-	    sa=new SoftAssert();
+		OKTADDSAP = new OKTAdminPostDetailScreenForAudio_Post();
+		OKTADLP = new OKTAdminLoginPage();
+		OKTADPS = new OKTAdminPostScreen();
+		TU = new TestUtil();
+		sa = new SoftAssert();
 	}
-	
-	
-	@Test(priority=0)
-	public void Verify_Labels() throws InterruptedException
-	{
-	
+
+	@Test(priority = 0)
+	public void Verify_Labels() throws InterruptedException {
+
 		Thread.sleep(50000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
@@ -59,41 +54,40 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 
 		OKTADDSAP.Select_PostType(prop.getProperty("PostType_Audio"));
 		Thread.sleep(5000);
-		
-		String Media_Preview_Label=OKTADDSAP.Media_Preview_Label();
+
+		String Media_Preview_Label = OKTADDSAP.Media_Preview_Label();
 		sa.assertEquals(Media_Preview_Label, "Media Preview", "Media Preview label is missing");
-		
-		String Thumbnail_Preview_Label=OKTADDSAP.Thumbnail_Preview_Label();
+
+		String Thumbnail_Preview_Label = OKTADDSAP.Thumbnail_Preview_Label();
 		sa.assertEquals(Thumbnail_Preview_Label, "Thumbnail Preview", "Thumbnail Preview label is missing");
-		
-		String Attachment_Media_Label=OKTADDSAP.Attachment_Media_Label();
+
+		String Attachment_Media_Label = OKTADDSAP.Attachment_Media_Label();
 		sa.assertEquals(Attachment_Media_Label, "Media", "Media label is missing");
-		
-		String Attachment_Thumbnail_Label=OKTADDSAP.Attachment_Thumbnail_Label();
+
+		String Attachment_Thumbnail_Label = OKTADDSAP.Attachment_Thumbnail_Label();
 		sa.assertEquals(Attachment_Thumbnail_Label, "Thumbnail", "Thumbnail label is missing");
-		
-		String Dropdown_PostType_Label=OKTADDSAP.Dropdown_PostType_Label();
+
+		String Dropdown_PostType_Label = OKTADDSAP.Dropdown_PostType_Label();
 		sa.assertEquals(Dropdown_PostType_Label, "Post Type", "Post Type label is missing");
-		
-		String Dropdown_User_Label=OKTADDSAP.Dropdown_User_Label();
+
+		String Dropdown_User_Label = OKTADDSAP.Dropdown_User_Label();
 		sa.assertEquals(Dropdown_User_Label, "User", "User label is missing");
-		
-		String Dropdown_Community_Label=OKTADDSAP.Dropdown_Community_Label();
+
+		String Dropdown_Community_Label = OKTADDSAP.Dropdown_Community_Label();
 		sa.assertEquals(Dropdown_Community_Label, "Community", "Community label is missing");
-		
-		String Description_Label=OKTADDSAP.Description_Label();
+
+		String Description_Label = OKTADDSAP.Description_Label();
 		sa.assertEquals(Description_Label, "Description", "Description label is missing");
-		
+
 		sa.assertAll();
-		
+
 		Thread.sleep(5000);
-				 
+
 	}
-	
-	@Test(priority=1)// TEST CASE-1
-	public void Verify_Multiple_Validation_For_Audio_Post() throws InterruptedException
-	{
-	
+
+	@Test(priority = 1) // TEST CASE-1
+	public void Verify_Multiple_Validation_For_Audio_Post() throws InterruptedException {
+
 		Thread.sleep(50000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
@@ -103,31 +97,29 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 		Thread.sleep(5000);
 		OKTADDSAP.Create_button();
 		Thread.sleep(5000);
-		
+
 		OKTADDSAP.Select_PostType(prop.getProperty("PostType_Audio"));
 		Thread.sleep(5000);
 		OKTADDSAP.PostDetail_Create_button();
 		Thread.sleep(5000);
-		String Validation_PleaseSelectUser=OKTADDSAP.Validation_PleaseSelectUser();
+		String Validation_PleaseSelectUser = OKTADDSAP.Validation_PleaseSelectUser();
 		sa.assertEquals(Validation_PleaseSelectUser, "Please select user", "Please select user validation is missing");
 		OKTADDSAP.Select_User(prop.getProperty("User"));
 		Thread.sleep(10000);
-		
+
 		OKTADDSAP.PostDetail_Create_button();
 		Thread.sleep(5000);
-		String Validation_PleaseSelectCommunity=OKTADDSAP.Validation_PleaseSelectCommunity();
-		sa.assertEquals(Validation_PleaseSelectCommunity, "Please select community", "Please select community validation is missing");
+		String Validation_PleaseSelectCommunity = OKTADDSAP.Validation_PleaseSelectCommunity();
+		sa.assertEquals(Validation_PleaseSelectCommunity, "Please select community",
+				"Please select community validation is missing");
 		OKTADDSAP.Select_Community(prop.getProperty("Community"));
 		Thread.sleep(5000);
-		
-		 
+
 	}
-	
-	
-	@Test(priority=2)
-	public void Verify_Validation_Audio_Post() throws InterruptedException
-	{
-		
+
+	@Test(priority = 2)
+	public void Verify_Validation_Audio_Post() throws InterruptedException {
+
 		Thread.sleep(50000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(60000);
@@ -137,27 +129,24 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 		Thread.sleep(5000);
 		OKTADDSAP.Create_button();
 		Thread.sleep(5000);
-		
+
 		OKTADDSAP.Select_PostType(prop.getProperty("PostType_Audio"));
 		OKTADDSAP.Select_PostStatus(prop.getProperty("PostStatus"));
 		OKTADDSAP.Select_User(prop.getProperty("User"));
 		OKTADDSAP.Select_Community(prop.getProperty("Community"));
 		OKTADDSAP.Description_Textbox(prop.getProperty("DescriptionAudioPost"));
 		OKTADDSAP.PostDetail_Create_button();
-		String Validation_FilenameOrFilCannotBeBlank=OKTADDSAP.Validation_FilenameOrFilCannotBeBlank();
-		sa.assertEquals(Validation_FilenameOrFilCannotBeBlank, "Filename or File can not be blank", "Filename or File can not be blank" + " validation is missing");
+		String Validation_FilenameOrFilCannotBeBlank = OKTADDSAP.Validation_FilenameOrFilCannotBeBlank();
+		sa.assertEquals(Validation_FilenameOrFilCannotBeBlank, "Filename or File can not be blank",
+				"Filename or File can not be blank" + " validation is missing");
 		Thread.sleep(5000);
 		sa.assertAll();
-				 
+
 	}
-	
-	
-	
-	
-	@Test(priority=3)
-	public void CreateAndUpdate_Audio_Post() throws InterruptedException, AWTException
-	{
-		
+
+	@Test(priority = 3)
+	public void CreateAndUpdate_Audio_Post() throws InterruptedException, AWTException {
+
 		Thread.sleep(5000);
 		OKTADLP.LoginWithGoogleButton();
 		Thread.sleep(5000);
@@ -167,76 +156,75 @@ public class OKTAdminPostDetailScreenForAudio_PostTest extends TestBase {
 		Thread.sleep(50000);
 		OKTADDSAP.Create_button();
 		Thread.sleep(5000);
-		
+
 		OKTADDSAP.Select_PostType(prop.getProperty("PostType_Audio"));
 		OKTADDSAP.Select_PostStatus(prop.getProperty("PostStatus"));
 		OKTADDSAP.Select_User(prop.getProperty("User"));
 		OKTADDSAP.Select_Community(prop.getProperty("Community"));
 		OKTADDSAP.Description_Textbox(prop.getProperty("DescriptionAudioPost"));
 		Thread.sleep(5000);
-	
-		
+
 		TU.Audio_File_Upload();
 		Thread.sleep(5000);
-		boolean Attachment_Media_Preview=OKTADDSAP.Attachment_Media_Preview();
+		boolean Attachment_Media_Preview = OKTADDSAP.Attachment_Media_Preview();
 		sa.assertEquals(Attachment_Media_Preview, true, "Attachment Media preview is missing");
 		Thread.sleep(5000);
-		
+
 		TU.Thumbnail_File_Upload();
 		Thread.sleep(5000);
-		boolean Attachment_Thumbnail_Preview=OKTADDSAP.Attachment_Thumbnail_Preview();
+		boolean Attachment_Thumbnail_Preview = OKTADDSAP.Attachment_Thumbnail_Preview();
 		sa.assertEquals(Attachment_Thumbnail_Preview, true, "Attachment Thumbnail preview is missing");
 		Thread.sleep(5000);
 		sa.assertAll();
 		OKTADDSAP.PostDetail_Create_button();
 		Thread.sleep(5000);
-		
-		String Validation_CreatedSuccessfully=OKTADDSAP.Validation_CreatedSuccessfully();
-		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully", "Created successfully validation is missing");
-		
-		String Verify_Audio_Post_Name_OR_Description_On_Post_List=OKTADDSAP.Audio_Post_Name_OR_Description_On_Post_List();
+
+		String Validation_CreatedSuccessfully = OKTADDSAP.Validation_CreatedSuccessfully();
+		sa.assertEquals(Validation_CreatedSuccessfully, "Created successfully",
+				"Created successfully validation is missing");
+
+		String Verify_Audio_Post_Name_OR_Description_On_Post_List = OKTADDSAP
+				.Audio_Post_Name_OR_Description_On_Post_List();
 		sa.assertEquals(Verify_Audio_Post_Name_OR_Description_On_Post_List, "Audio Post");
-		
-		String Verify_Audio_Post_Active_Status_On_Post_List=OKTADDSAP.Audio_Post_Active_Status_On_Post_List();
+
+		String Verify_Audio_Post_Active_Status_On_Post_List = OKTADDSAP.Audio_Post_Active_Status_On_Post_List();
 		sa.assertEquals(Verify_Audio_Post_Active_Status_On_Post_List, "Active");
-		
-		String Verify_Audio_Post_Community_Name_Label_On_Post_List=OKTADDSAP.Audio_Post_Community_Name_Label_On_Post_List();
+
+		String Verify_Audio_Post_Community_Name_Label_On_Post_List = OKTADDSAP
+				.Audio_Post_Community_Name_Label_On_Post_List();
 		sa.assertEquals(Verify_Audio_Post_Community_Name_Label_On_Post_List, "Community name:");
-		
-		String Verify_Audio_Post_Community_Name_On_Post_List=OKTADDSAP.Audio_Post_Community_Name_On_Post_List();
+
+		String Verify_Audio_Post_Community_Name_On_Post_List = OKTADDSAP.Audio_Post_Community_Name_On_Post_List();
 		sa.assertEquals(Verify_Audio_Post_Community_Name_On_Post_List, "Ok Tested");
 
-		String Verify_Audio_Post_User_Label_On_Post_List=OKTADDSAP.Audio_Post_User_Label_On_Post_List();
+		String Verify_Audio_Post_User_Label_On_Post_List = OKTADDSAP.Audio_Post_User_Label_On_Post_List();
 		sa.assertEquals(Verify_Audio_Post_User_Label_On_Post_List, "User:");
-		
-		String Verify_Audio_Post_User_Name_On_Post_List=OKTADDSAP.Audio_Post_User_Name_On_Post_List();
+
+		String Verify_Audio_Post_User_Name_On_Post_List = OKTADDSAP.Audio_Post_User_Name_On_Post_List();
 		sa.assertEquals(Verify_Audio_Post_User_Name_On_Post_List, "Avi Gupta");
 		Thread.sleep(5000);
-		
+
 		OKTADDSAP.TextPostsEdit();
-		
+
 		OKTADDSAP.UpdateDescription_Textbox(prop.getProperty("UpdateDescriptionAudioPost"));
-		
+
 		OKTADDSAP.Updatebutton();
-		
+
 		Thread.sleep(5000);
-		
-		String Validation_UpdatedSuccessfully=OKTADDSAP.Validation_UpdatedSuccessfully();
+
+		String Validation_UpdatedSuccessfully = OKTADDSAP.Validation_UpdatedSuccessfully();
 		sa.assertEquals(Validation_UpdatedSuccessfully, "Updated successfully", "Updated successfully");
 		Thread.sleep(5000);
-		
+
 		sa.assertAll();
-		
+
 		System.out.println("OKTAdminPostDetailScreenForAudio_PostTest - Test cases has been executed");
 
-	
-		}
-	
-	@AfterMethod
-	public void teardown()
-	{
-		driver.quit();
 	}
 
+	@AfterMethod
+	public void teardown() {
+		driver.quit();
+	}
 
 }
